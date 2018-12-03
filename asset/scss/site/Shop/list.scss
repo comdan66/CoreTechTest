@@ -24,7 +24,7 @@
         @include background-image(linear-gradient(transparent 65%, rgba(255, 209, 204, 1.00) 70%));
       }
 
-      .pages {
+      > .pages {
         display: inline-block;
         width: 100%;
         margin-top: 70px;
@@ -214,33 +214,9 @@
                   }
                 }
               }
-
+              
               .like {
-                display: inline-block;
-                height: 36px;
-                line-height: 36px;
-                padding: 0 12px;
-                font-size: 18px;
-                font-weight: bold;
-                border: 1px solid rgba(234, 85, 73, 1.00);
-                background-color: white;
-                @include border-radius(4px);
-                text-transform: uppercase;
                 margin-top: 10px;
-                cursor: pointer;
-
-                &:before {
-                  content: '\e003';
-                  font-family: "icomoon";
-                  display: inline-block;
-                  margin-right: 8px;
-                  @include scale(1.5);
-                  font-weight: normal;
-                  color: rgba(234, 85, 73, 1.00);
-                }
-                &.ed:before {
-                  content: '\e004';
-                }
               }
             }
           }

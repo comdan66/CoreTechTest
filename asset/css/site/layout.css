@@ -31,3 +31,13 @@ html body > * { display: inline-block; width: 100%; }
 #footer .container { text-align: right; }
 #footer .container > a { display: inline-block; width: auto; width: 100px; margin: 20px 20px 20px 0; }
 #footer .container > a img { width: 100%; -webkit-filter: brightness(100); filter: brightness(100); }
+
+.like, .share { display: inline-block; height: 36px; line-height: 36px; padding: 0 12px; font-size: 18px; font-weight: bold; border: 1px solid #0173a8; background-color: white; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-transform: uppercase; cursor: pointer; }
+.like:before, .share:before { font-family: "icomoon"; display: inline-block; margin-right: 8px; -moz-transform: scale(1.8, 1.8); -ms-transform: scale(1.8, 1.8); -webkit-transform: scale(1.8, 1.8); transform: scale(1.8, 1.8); margin-top: -5px; font-weight: normal; color: #0173a8; content: '\e006'; }
+
+.share { -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.share:hover { background-color: #ccefff; }
+
+.like { border: 1px solid #ea5549; }
+.like:before { content: '\e003'; color: #ea5549; -moz-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); -webkit-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); margin-top: 0; }
+.like.ed:before { content: '\e004'; }

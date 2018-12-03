@@ -156,3 +156,50 @@ html {
     }
   }
 }
+
+.like, .share {
+
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid rgba(1, 115, 168, 1.00);
+  background-color: white;
+  @include border-radius(4px);
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  &:before {
+    font-family: "icomoon";
+    display: inline-block;
+    margin-right: 8px;
+    @include scale(1.8);
+    margin-top: -5px;
+    font-weight: normal;
+    color: rgba(1, 115, 168, 1.00);
+    content: '\e006';
+  }
+}
+.share {
+  @include transition(background-color .3s);
+  
+  &:hover {
+    background-color: rgba(204, 239, 255, 1.00)
+  }
+}
+
+.like {
+  border: 1px solid rgba(234, 85, 73, 1.00);
+
+  &:before {
+    content: '\e003';
+    color: rgba(234, 85, 73, 1.00);
+    @include scale(1.5);
+    margin-top: 0;
+  }
+  &.ed:before {
+    content: '\e004';
+  }
+}

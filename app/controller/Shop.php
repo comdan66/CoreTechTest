@@ -17,6 +17,9 @@ class Shop extends SiteController {
   }
 
   public function show() {
+    $this->asset
+         ->addCSS('/asset/css/site/Shop/show.css')
+         ->addJS('/asset/js/site/Shop/show.js');
     return $this->view;
   }
 }

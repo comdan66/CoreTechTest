@@ -1,0 +1,1735 @@
+#main { margin: 30px auto; }
+#main .container > header { display: inline-block; width: 100%; *zoom: 1; }
+#main .container > header:after { display: table; content: ""; line-height: 0; clear: both; }
+#main .container > header > * { float: left; display: inline-block; max-width: calc(100% - 230px); }
+#main .container > header > * + * { float: right; width: 230px; }
+#main .container > header h2 { display: inline-block; font-size: 33px; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI2NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNkMmI0OGMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(65%, rgba(0, 0, 0, 0)), color-stop(70%, #d2b48c)); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 65%, #d2b48c 70%); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 65%, #d2b48c 70%); background-image: linear-gradient(rgba(0, 0, 0, 0) 65%, #d2b48c 70%); }
+#main .container > header div { *zoom: 1; }
+#main .container > header div:after { display: table; content: ""; line-height: 0; clear: both; }
+#main .container > header div > * { float: right; }
+#main .container > header div > * + * { margin-right: 12px; }
+#main .container > article { display: inline-block; width: 100%; margin-top: 50px; font-size: 18px; text-align: left; }
+#main .container > article > * { display: inline-block; width: 100%; }
+#main .container > article > p { margin: 0; margin-top: 20px; font-size: 14px; line-height: 16px; }
+#main .container h3 { display: inline-block; width: 100%; height: 40px; line-height: 40px; text-align: left; margin: 0; margin-top: 40px; font-size: 23px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #f3a68c; }
+#main .container h3:before { display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; color: #999999; font-size: 36px; margin-right: 4px; }
+
+#banner, #maps, #table { display: inline-block; width: 700px; height: 300px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px; }
+
+#maps { background-color: #dddddd; }
+
+.banner { position: relative; display: inline-block; }
+.banner .items { position: relative; z-index: 1; display: inline-block; width: 100%; height: 100%; overflow: hidden; }
+.banner .items .item { position: absolute; left: 0; top: 0; display: inline-block; height: 100%; background-color: white; -moz-transition: left 0.3s; -o-transition: left 0.3s; -webkit-transition: left 0.3s; transition: left 0.3s; }
+.banner a { position: absolute; top: 0; z-index: 2; display: inline-block; width: 32px; height: 100%; cursor: pointer; text-align: center; background-color: rgba(39, 40, 34, 0.3); -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.banner a:before { position: absolute; top: calc(50% - 32px / 2); left: 0; display: inline-block; width: 32px; height: 32px; line-height: 32px; text-align: center; font-size: 32px; color: white; font-family: "icomoon"; }
+.banner a.left { left: 0; }
+.banner a.left:before { content: '\e002'; }
+.banner a.right { right: 0; }
+.banner a.right:before { content: '\e001'; }
+.banner a:hover { background-color: rgba(39, 40, 34, 0.5); }
+.banner a:active { background-color: tomato; }
+.banner .pages { position: absolute; bottom: 10px; left: 0; z-index: 2; display: inline-block; width: 100%; height: 12px; text-align: center; }
+.banner .pages > div { display: inline-block; margin: 0 auto; *zoom: 1; }
+.banner .pages > div:after { display: table; content: ""; line-height: 0; clear: both; }
+.banner .pages > div > label { display: inline-block; width: 36px; height: 12px; margin: 0 3px; cursor: pointer; background-color: rgba(39, 40, 34, 0.3); -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.banner .pages > div > label:hover { background-color: rgba(39, 40, 34, 0.5); }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='1'] .items .item { width: 100%; }
+  .banner[data-unit='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='1'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='1'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='1'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='1'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='1'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='1'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='1'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='1'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='1'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='1'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='1'] .items .item { width: calc(100% / 1); }
+  .banner[data-unit='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 1)); }
+  .banner[data-unit='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * (100% / 1)); }
+  .banner[data-unit='1'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='2'] .items .item { width: 100%; }
+  .banner[data-unit='2'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='2'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='2'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='2'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='2'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='2'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='2'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='2'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='2'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='2'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='2'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='2'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='2'] .items .item { width: calc(100% / 2); }
+  .banner[data-unit='2'] .items .item:nth-child(1) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(2) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(3) { left: calc(2 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(4) { left: calc(3 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(5) { left: calc(4 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(6) { left: calc(5 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(7) { left: calc(6 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(8) { left: calc(7 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(9) { left: calc(8 * (100% / 2)); }
+  .banner[data-unit='2'] .items .item:nth-child(10) { left: calc(9 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(1) { left: calc(-2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(2) { left: calc(-1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(3) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(4) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(5) { left: calc(2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(6) { left: calc(3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(7) { left: calc(4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(8) { left: calc(5 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(9) { left: calc(6 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .items .item:nth-child(10) { left: calc(7 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(1) { left: calc(-4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(2) { left: calc(-3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(3) { left: calc(-2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(4) { left: calc(-1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(5) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(6) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(7) { left: calc(2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(8) { left: calc(3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(9) { left: calc(4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .items .item:nth-child(10) { left: calc(5 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(1) { left: calc(-6 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(2) { left: calc(-5 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(3) { left: calc(-4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(4) { left: calc(-3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(5) { left: calc(-2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(6) { left: calc(-1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(7) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(8) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(9) { left: calc(2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .items .item:nth-child(10) { left: calc(3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(1) { left: calc(-8 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(2) { left: calc(-7 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(3) { left: calc(-6 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(4) { left: calc(-5 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(5) { left: calc(-4 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(6) { left: calc(-3 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(7) { left: calc(-2 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(8) { left: calc(-1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(9) { left: calc(0 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .items .item:nth-child(10) { left: calc(1 * (100% / 2)); }
+  .banner[data-unit='2'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='3'] .items .item { width: 100%; }
+  .banner[data-unit='3'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='3'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='3'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='3'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='3'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='3'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='3'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='3'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='3'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='3'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='3'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='3'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='3'] .items .item { width: calc(100% / 3); }
+  .banner[data-unit='3'] .items .item:nth-child(1) { left: calc(0 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(2) { left: calc(1 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(3) { left: calc(2 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(4) { left: calc(3 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(5) { left: calc(4 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(6) { left: calc(5 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(7) { left: calc(6 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(8) { left: calc(7 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(9) { left: calc(8 * (100% / 3)); }
+  .banner[data-unit='3'] .items .item:nth-child(10) { left: calc(9 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(1) { left: calc(-3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(2) { left: calc(-2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(3) { left: calc(-1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(4) { left: calc(0 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(5) { left: calc(1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(6) { left: calc(2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(7) { left: calc(3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(8) { left: calc(4 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(9) { left: calc(5 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .items .item:nth-child(10) { left: calc(6 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(1) { left: calc(-6 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(2) { left: calc(-5 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(3) { left: calc(-4 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(4) { left: calc(-3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(5) { left: calc(-2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(6) { left: calc(-1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(7) { left: calc(0 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(8) { left: calc(1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(9) { left: calc(2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .items .item:nth-child(10) { left: calc(3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(1) { left: calc(-9 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(2) { left: calc(-8 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(3) { left: calc(-7 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(4) { left: calc(-6 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(5) { left: calc(-5 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(6) { left: calc(-4 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(7) { left: calc(-3 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(8) { left: calc(-2 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(9) { left: calc(-1 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .items .item:nth-child(10) { left: calc(0 * (100% / 3)); }
+  .banner[data-unit='3'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='4'] .items .item { width: 100%; }
+  .banner[data-unit='4'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='4'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='4'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='4'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='4'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='4'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='4'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='4'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='4'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='4'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='4'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='4'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='4'] .items .item { width: calc(100% / 4); }
+  .banner[data-unit='4'] .items .item:nth-child(1) { left: calc(0 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(2) { left: calc(1 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(3) { left: calc(2 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(4) { left: calc(3 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(5) { left: calc(4 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(6) { left: calc(5 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(7) { left: calc(6 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(8) { left: calc(7 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(9) { left: calc(8 * (100% / 4)); }
+  .banner[data-unit='4'] .items .item:nth-child(10) { left: calc(9 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(1) { left: calc(-4 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(2) { left: calc(-3 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(3) { left: calc(-2 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(4) { left: calc(-1 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(5) { left: calc(0 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(6) { left: calc(1 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(7) { left: calc(2 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(8) { left: calc(3 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(9) { left: calc(4 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .items .item:nth-child(10) { left: calc(5 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(1) { left: calc(-8 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(2) { left: calc(-7 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(3) { left: calc(-6 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(4) { left: calc(-5 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(5) { left: calc(-4 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(6) { left: calc(-3 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(7) { left: calc(-2 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(8) { left: calc(-1 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(9) { left: calc(0 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .items .item:nth-child(10) { left: calc(1 * (100% / 4)); }
+  .banner[data-unit='4'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='5'] .items .item { width: 100%; }
+  .banner[data-unit='5'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='5'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='5'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='5'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='5'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='5'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='5'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='5'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='5'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='5'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='5'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='5'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='5'] .items .item { width: calc(100% / 5); }
+  .banner[data-unit='5'] .items .item:nth-child(1) { left: calc(0 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(2) { left: calc(1 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(3) { left: calc(2 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(4) { left: calc(3 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(5) { left: calc(4 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(6) { left: calc(5 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(7) { left: calc(6 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(8) { left: calc(7 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(9) { left: calc(8 * (100% / 5)); }
+  .banner[data-unit='5'] .items .item:nth-child(10) { left: calc(9 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(1) { left: calc(-5 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(2) { left: calc(-4 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(3) { left: calc(-3 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(4) { left: calc(-2 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(5) { left: calc(-1 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(6) { left: calc(0 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(7) { left: calc(1 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(8) { left: calc(2 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(9) { left: calc(3 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .items .item:nth-child(10) { left: calc(4 * (100% / 5)); }
+  .banner[data-unit='5'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='6'] .items .item { width: 100%; }
+  .banner[data-unit='6'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='6'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='6'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='6'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='6'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='6'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='6'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='6'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='6'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='6'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='6'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='6'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='6'] .items .item { width: calc(100% / 6); }
+  .banner[data-unit='6'] .items .item:nth-child(1) { left: calc(0 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(2) { left: calc(1 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(3) { left: calc(2 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(4) { left: calc(3 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(5) { left: calc(4 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(6) { left: calc(5 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(7) { left: calc(6 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(8) { left: calc(7 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(9) { left: calc(8 * (100% / 6)); }
+  .banner[data-unit='6'] .items .item:nth-child(10) { left: calc(9 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(1) { left: calc(-6 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(2) { left: calc(-5 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(3) { left: calc(-4 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(4) { left: calc(-3 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(5) { left: calc(-2 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(6) { left: calc(-1 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(7) { left: calc(0 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(8) { left: calc(1 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(9) { left: calc(2 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .items .item:nth-child(10) { left: calc(3 * (100% / 6)); }
+  .banner[data-unit='6'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='7'] .items .item { width: 100%; }
+  .banner[data-unit='7'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='7'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='7'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='7'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='7'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='7'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='7'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='7'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='7'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='7'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='7'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='7'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='7'] .items .item { width: calc(100% / 7); }
+  .banner[data-unit='7'] .items .item:nth-child(1) { left: calc(0 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(2) { left: calc(1 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(3) { left: calc(2 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(4) { left: calc(3 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(5) { left: calc(4 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(6) { left: calc(5 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(7) { left: calc(6 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(8) { left: calc(7 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(9) { left: calc(8 * (100% / 7)); }
+  .banner[data-unit='7'] .items .item:nth-child(10) { left: calc(9 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(1) { left: calc(-7 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(2) { left: calc(-6 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(3) { left: calc(-5 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(4) { left: calc(-4 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(5) { left: calc(-3 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(6) { left: calc(-2 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(7) { left: calc(-1 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(8) { left: calc(0 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(9) { left: calc(1 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .items .item:nth-child(10) { left: calc(2 * (100% / 7)); }
+  .banner[data-unit='7'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='8'] .items .item { width: 100%; }
+  .banner[data-unit='8'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='8'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='8'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='8'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='8'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='8'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='8'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='8'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='8'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='8'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='8'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='8'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='8'] .items .item { width: calc(100% / 8); }
+  .banner[data-unit='8'] .items .item:nth-child(1) { left: calc(0 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(2) { left: calc(1 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(3) { left: calc(2 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(4) { left: calc(3 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(5) { left: calc(4 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(6) { left: calc(5 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(7) { left: calc(6 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(8) { left: calc(7 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(9) { left: calc(8 * (100% / 8)); }
+  .banner[data-unit='8'] .items .item:nth-child(10) { left: calc(9 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(1) { left: calc(-8 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(2) { left: calc(-7 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(3) { left: calc(-6 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(4) { left: calc(-5 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(5) { left: calc(-4 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(6) { left: calc(-3 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(7) { left: calc(-2 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(8) { left: calc(-1 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(9) { left: calc(0 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .items .item:nth-child(10) { left: calc(1 * (100% / 8)); }
+  .banner[data-unit='8'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='9'] .items .item { width: 100%; }
+  .banner[data-unit='9'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='9'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='9'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='9'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='9'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='9'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='9'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='9'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='9'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='9'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='9'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='9'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='9'] .items .item { width: calc(100% / 9); }
+  .banner[data-unit='9'] .items .item:nth-child(1) { left: calc(0 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(2) { left: calc(1 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(3) { left: calc(2 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(4) { left: calc(3 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(5) { left: calc(4 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(6) { left: calc(5 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(7) { left: calc(6 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(8) { left: calc(7 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(9) { left: calc(8 * (100% / 9)); }
+  .banner[data-unit='9'] .items .item:nth-child(10) { left: calc(9 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(1) { left: calc(-9 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(2) { left: calc(-8 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(3) { left: calc(-7 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(4) { left: calc(-6 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(5) { left: calc(-5 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(6) { left: calc(-4 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(7) { left: calc(-3 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(8) { left: calc(-2 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(9) { left: calc(-1 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .items .item:nth-child(10) { left: calc(0 * (100% / 9)); }
+  .banner[data-unit='9'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .banner { width: 100%; }
+  .banner[data-unit='10'] .items .item { width: 100%; }
+  .banner[data-unit='10'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='10'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * 100%); }
+  .banner[data-unit='10'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(1) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(2) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(3) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(4) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(5) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(6) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(7) { left: calc(5 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(8) { left: calc(6 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(9) { left: calc(7 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .items .item:nth-child(10) { left: calc(8 * 100%); }
+  .banner[data-unit='10'][data-page='2'] .pages > div > label:nth-child(2) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(1) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(2) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(3) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(4) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(5) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(6) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(7) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(8) { left: calc(5 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(9) { left: calc(6 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .items .item:nth-child(10) { left: calc(7 * 100%); }
+  .banner[data-unit='10'][data-page='3'] .pages > div > label:nth-child(3) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(1) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(2) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(3) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(4) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(5) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(6) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(7) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(8) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(9) { left: calc(5 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .items .item:nth-child(10) { left: calc(6 * 100%); }
+  .banner[data-unit='10'][data-page='4'] .pages > div > label:nth-child(4) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(1) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(2) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(3) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(4) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(5) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(6) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(7) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(8) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(9) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .items .item:nth-child(10) { left: calc(5 * 100%); }
+  .banner[data-unit='10'][data-page='5'] .pages > div > label:nth-child(5) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(1) { left: calc(-5 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(2) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(3) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(4) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(5) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(6) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(7) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(8) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(9) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .items .item:nth-child(10) { left: calc(4 * 100%); }
+  .banner[data-unit='10'][data-page='6'] .pages > div > label:nth-child(6) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(1) { left: calc(-6 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(2) { left: calc(-5 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(3) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(4) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(5) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(6) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(7) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(8) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(9) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .items .item:nth-child(10) { left: calc(3 * 100%); }
+  .banner[data-unit='10'][data-page='7'] .pages > div > label:nth-child(7) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(1) { left: calc(-7 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(2) { left: calc(-6 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(3) { left: calc(-5 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(4) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(5) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(6) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(7) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(8) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(9) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .items .item:nth-child(10) { left: calc(2 * 100%); }
+  .banner[data-unit='10'][data-page='8'] .pages > div > label:nth-child(8) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(1) { left: calc(-8 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(2) { left: calc(-7 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(3) { left: calc(-6 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(4) { left: calc(-5 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(5) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(6) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(7) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(8) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(9) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .items .item:nth-child(10) { left: calc(1 * 100%); }
+  .banner[data-unit='10'][data-page='9'] .pages > div > label:nth-child(9) { background-color: tomato; }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(1) { left: calc(-9 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(2) { left: calc(-8 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(3) { left: calc(-7 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(4) { left: calc(-6 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(5) { left: calc(-5 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(6) { left: calc(-4 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(7) { left: calc(-3 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(8) { left: calc(-2 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(9) { left: calc(-1 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .items .item:nth-child(10) { left: calc(0 * 100%); }
+  .banner[data-unit='10'][data-page='10'] .pages > div > label:nth-child(10) { background-color: tomato; } }
+@media screen and (min-width: 450px) { .banner[data-unit='10'] .items .item { width: calc(100% / 10); }
+  .banner[data-unit='10'] .items .item:nth-child(1) { left: calc(0 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(2) { left: calc(1 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(3) { left: calc(2 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(4) { left: calc(3 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(5) { left: calc(4 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(6) { left: calc(5 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(7) { left: calc(6 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(8) { left: calc(7 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(9) { left: calc(8 * (100% / 10)); }
+  .banner[data-unit='10'] .items .item:nth-child(10) { left: calc(9 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(1) { left: calc(0 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(2) { left: calc(1 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(3) { left: calc(2 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(4) { left: calc(3 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(5) { left: calc(4 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(6) { left: calc(5 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(7) { left: calc(6 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(8) { left: calc(7 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(9) { left: calc(8 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .items .item:nth-child(10) { left: calc(9 * (100% / 10)); }
+  .banner[data-unit='10'][data-page='1'] .pages > div > label:nth-child(1) { background-color: tomato; } }
+
+#table { display: table; border-spacing: 3px; table-layout: fixed; height: auto; }
+#table > div { display: table-row; }
+#table > div span, #table > div:before { display: table-cell; padding: 10px; background-color: white; border: 1px solid #cccccc; font-size: 14px; }
+#table > div:before { content: attr(data-title); width: 200px; vertical-align: middle; background-color: #f5dbab; border: 1px solid #f5dbab; font-weight: bold; }
+#table > div span { text-align: left; }

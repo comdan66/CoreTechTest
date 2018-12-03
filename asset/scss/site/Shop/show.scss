@@ -1,0 +1,337 @@
+@import "_oa";
+
+#main {
+  margin: 30px auto;
+  
+  .container {
+    > header {
+      display: inline-block;
+      width: 100%;
+      @include clearfix();
+      
+      > * {
+        float: left;
+        display: inline-block;
+        max-width: calc(100% - 230px);
+        
+        + * {
+          float: right;
+          width: 230px;
+        }
+      }
+      h2 {
+        display: inline-block;
+        font-size: 33px;
+        @include background-image(linear-gradient(transparent 65%, rgba(210, 180, 140, 1.00) 70%));
+      }
+      div {
+        @include clearfix();
+        
+        > * {
+          float: right;
+          + * {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+    > article {
+      display: inline-block;
+      width: 100%;
+      margin-top: 50px;
+      font-size: 18px;
+      text-align: left;
+      > * {
+        display: inline-block;
+        width: 100%;
+      }
+      > p {
+        margin: 0;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    h3 {
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      margin: 0;
+      margin-top: 40px;
+      font-size: 23px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 2px solid rgba(243, 166, 140, 1.00);
+
+      &:before {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: rgba(153, 153, 153, 1.00);
+        font-size: 36px;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+#banner, #maps, #table {
+  display: inline-block;
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#maps {
+  background-color: rgba(221, 221, 221, 1.00);
+}
+
+.banner {
+  $max-n: 10; //  項目最多幾個
+
+  position: relative;
+  display: inline-block;
+
+  
+  .items {
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    
+    .item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      height: 100%;
+
+      background-color: white;
+
+      @include transition(left .3s);
+    }
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    
+    display: inline-block;
+    width: 32px;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    
+    background-color: rgba(39, 40, 34, .300);
+    @include transition(background-color .3s);
+
+    &:before {
+      position: absolute;
+      top: calc(50% - 32px / 2);
+      left: 0;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 32px;
+      color: white;
+
+      font-family: "icomoon";
+    }
+    
+    &.left {
+      left: 0;
+      &:before {
+        content: '\e002';
+      }
+    }
+    &.right {
+      right: 0;
+      &:before {
+        content: '\e001';
+      }
+    }
+    &:hover {
+      background-color: rgba(39, 40, 34, .500);
+    }
+    &:active {
+      background-color: rgba(255, 99, 71, 1.00);
+    }
+  }
+  .pages {
+    $w: 12px; // 點的寬高
+
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 2;
+    
+    display: inline-block;
+    width: 100%;
+    height: $w;
+
+    text-align: center;
+
+    > div {
+      display: inline-block;
+      margin: 0 auto;
+      @include clearfix();
+      
+      > label {
+        display: inline-block;
+        width: 36px;
+        height: $w;
+        margin: 0 3px;
+        cursor: pointer;
+
+        background-color: rgba(39, 40, 34, .300);
+
+        @include transition(background-color .3s);
+
+
+        &:hover { // 滑過
+          background-color: rgba(39, 40, 34, .500);
+        }
+      }
+    }
+  }
+
+  $max-unit: 10; //  data-unit 最大值
+  @for $i from 1 through $max-unit {
+    @include range-width(0, 450px) {
+      width: 100%;
+      &[data-unit='#{$i}'] {
+        .items {
+          .item {
+            width: 100%;
+
+            @for $j from 1 through $max-n {
+              &:nth-child(#{$j}) {
+                left: calc(#{($j - 1)} * 100%);
+              }
+            }
+          }
+        }
+        
+        $p: $max-n;
+
+        @for $j from 1 through $p {
+          &[data-page='#{$j}'] {
+            .items {
+              .item {
+                @for $k from 1 through $max-n {
+                  &:nth-child(#{$k}) {
+                    left: calc(#{($k - $j)} * 100%);
+                  }
+                }
+              }
+            }
+
+            .pages {
+              > div {
+                > label {
+                  @for $k from 1 through $p {
+                    &:nth-child(#{$k}) {
+                      @if $k == $j {
+                        // 當頁下的點顏色
+                        background-color: rgba(255, 99, 71, 1.00);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+    @include range-width(450px) {
+      &[data-unit='#{$i}'] {
+        .items {
+          .item {
+            width: calc(100% / #{$i});
+
+            @for $j from 1 through $max-n {
+              &:nth-child(#{$j}) {
+                left: calc(#{($j - 1)} * (100% / #{$i}));
+              }
+            }
+          }
+        }
+        
+        $p: ceil($max-n / $i);
+
+        @for $j from 1 through $p {
+          &[data-page='#{$j}'] {
+            .items {
+              .item {
+                @for $k from 1 through $max-n {
+                  &:nth-child(#{$k}) {
+                    left: calc(#{($k - ($j - 1) * $i - 1)} * (100% / #{$i}));
+                  }
+                }
+              }
+            }
+
+            .pages {
+              > div {
+                > label {
+                  @for $k from 1 through $p {
+                    &:nth-child(#{$k}) {
+                      @if $k == $j {
+                        // 當頁下的點顏色
+                        background-color: rgba(255, 99, 71, 1.00);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+  }
+}
+
+#table {
+  display: table;
+  border-spacing: 3px;
+  table-layout: fixed;
+  height: auto;
+
+  > div {
+    display: table-row;
+
+    span, &:before {
+      display: table-cell;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 1.00);
+      border: 1px solid rgba(204, 204, 204, 1.00);
+      font-size: 14px;
+    }
+    &:before {
+      content: attr(data-title);
+      width: 200px;
+      vertical-align: middle;
+      background-color: rgba(245, 219, 171, 1.00);
+      border: 1px solid rgba(245, 219, 171, 1.00);
+      font-weight: bold;
+    }
+    span {
+      text-align: left;
+    }
+  }
+}
