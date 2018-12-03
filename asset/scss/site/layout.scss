@@ -157,7 +157,7 @@ html {
   }
 }
 
-.like, .share {
+.like, .comment {
 
   display: inline-block;
   height: 36px;
@@ -170,7 +170,8 @@ html {
   @include border-radius(4px);
   text-transform: uppercase;
   cursor: pointer;
-  
+  text-decoration: none;
+
   &:before {
     font-family: "icomoon";
     display: inline-block;
@@ -182,7 +183,8 @@ html {
     content: '\e006';
   }
 }
-.share {
+.comment {
+  color: rgba(85, 85, 85, 1);
   @include transition(background-color .3s);
   
   &:hover {

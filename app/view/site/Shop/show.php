@@ -1,7 +1,7 @@
 <header>
   <h2>TEST1日式小小居酒屋</h2>
   <div>
-    <label class='share'>分享文</label>
+    <a class='comment' href=''>分享文</a>
     <label class='like'>like</label>
   </div>
 </header>
