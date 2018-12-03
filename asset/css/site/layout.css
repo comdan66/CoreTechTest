@@ -1,0 +1,33 @@
+*, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+
+html { position: relative; }
+html body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; text-align: center; background: white; font-size: 12px; color: #555; }
+html body::-moz-selection { color: white; background-color: #78baff; }
+html body::selection { color: white; background-color: #78baff; }
+html body > * { display: inline-block; width: 100%; }
+
+.container { display: inline-block; width: 100%; max-width: 1000px; margin: 0 auto; }
+
+#header > * { display: inline-block; width: 100%; }
+#header .top { height: 22px; line-height: 22px; color: white; background-color: #ffa273; }
+#header .top h1 { font-size: 12px; margin: 0; padding: 0; font-weight: normal; }
+#header .top .container { text-align: right; }
+#header .logo { margin-top: 20px; }
+#header .logo .container { text-align: left; }
+#header .logo .container > a { display: inline-block; width: auto; width: 160px; }
+#header .logo .container > a img { width: 100%; }
+
+#nav { margin-top: 30px; }
+#nav .container { padding-bottom: 20px; border-bottom: 1px solid #cccccc; *zoom: 1; }
+#nav .container:after { display: table; content: ""; line-height: 0; clear: both; }
+#nav .container > * { float: left; position: relative; display: inline-block; height: 22px; line-height: 22px; }
+#nav .container > * + * { margin-left: 20px; }
+#nav .container > * + *:before { position: absolute; top: 0; left: -20px; display: inline-block; width: 20px; height: 22px; line-height: 22px; text-align: center; font-family: "icomoon"; content: "\e001"; }
+#nav .container a { color: #e7616a; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+#nav .container a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+#nav .container span { color: #555555; }
+
+#footer { background-color: #ffa273; }
+#footer .container { text-align: right; }
+#footer .container > a { display: inline-block; width: auto; width: 100px; margin: 20px 20px 20px 0; }
+#footer .container > a img { width: 100%; -webkit-filter: brightness(100); filter: brightness(100); }

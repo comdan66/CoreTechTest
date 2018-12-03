@@ -1,0 +1,158 @@
+@import "_oa";
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include font-smoothing(antialiased);
+  }
+}
+
+
+
+html {
+  position: relative;
+
+  body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 1.00);
+
+    font-size: 12px;
+    color: #555;
+    
+    // 文字染色，背景色、文字色
+    @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+
+    > * {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#header {
+  
+  > * {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .top {
+    height: 22px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 1.00);
+    background-color: rgba(255, 162, 115, 1.00);
+    
+    h1 {
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    .container {
+      text-align: right;
+    }
+  }
+
+
+  .logo {
+    margin-top: 20px;
+    .container {
+      text-align: left;
+      
+      > a {
+        display: inline-block;
+        width: auto;
+        width: 160px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#nav {
+  margin-top: 30px;
+
+  .container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(204, 204, 204, 1.00);
+    @include clearfix();
+
+    > * {
+      float: left;
+      position: relative;
+      display: inline-block;
+      height: 22px;
+      line-height: 22px;
+      
+      + * {
+        margin-left: 20px;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -20px;
+
+          display: inline-block;
+          width: 20px;
+          height: 22px;
+          line-height: 22px;
+
+          text-align: center;
+          font-family: "icomoon";
+          content: "\e001";
+        }
+      }
+    }
+    a {
+      color: rgba(231, 97, 106, 1.00);
+      @include transition(opacity .3s);
+      
+      &:hover {
+        @include opacity(.7);
+      }
+    }
+    span {
+      color: rgba(85, 85, 85, 1.00)
+    }
+  }
+}
+
+#footer {
+  background-color: rgba(255, 162, 115, 1.00);
+
+  .container {
+    text-align: right;
+    
+    > a {
+      display: inline-block;
+      width: auto;
+      width: 100px;
+      margin: 20px 20px 20px 0;
+      img {
+        width: 100%;
+
+        @include filter(brightness(100));
+      }
+    }
+  }
+}
