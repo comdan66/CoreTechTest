@@ -3,6 +3,11 @@
 class AdminFormImages extends AdminFormUnit {
   private $val = [], $accept;
 
+  public function __construct($title, $name) {
+    parent::__construct($title, $name);
+    $this->obj->hasImage();
+  }
+
   public function accept($accept) {
     $this->accept = $accept;
     return $this;

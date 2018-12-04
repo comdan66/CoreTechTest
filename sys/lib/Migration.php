@@ -3,8 +3,6 @@
 class _MigrationModel extends M\Model {}
 
 class Migration {
-  const MODEL_NAME = '_MigrationModel';
-
   private static $obj;
   private static $gets;
   private static $files;
@@ -29,7 +27,7 @@ class Migration {
   }
 
   public static function init() {
-    $model = self::MODEL_NAME;
+    $model = '_MigrationModel';
     
     self::$obj = null;
     self::$gets = [];

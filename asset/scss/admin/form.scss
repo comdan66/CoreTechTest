@@ -66,6 +66,10 @@ form.form {
       width: 100%;
       font-size: 14px;
       color: rgba(90, 90, 90, 1);
+
+      &[disabled] {
+        cursor: not-allowed;
+      }
     }
     > textarea.pure {
       @include textarea;

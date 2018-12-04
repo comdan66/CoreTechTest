@@ -122,8 +122,11 @@ class Validator {
     if (!array_key_exists($this->key, $this->params))
       return $this;
 
-    $this->isNum()->trim()->stripTags();
-    isTaxNum($this->params[$this->key]) || self::error('「' . $this->name . '」格式錯誤！');
+    if ($this->isNeed || $this->params[$this->key]) {
+      $this->isNum()->trim()->stripTags();
+      isTaxNum($this->params[$this->key]) || self::error('「' . $this->name . '」格式錯誤！');
+    }
+
     return $this;
   }
 
@@ -244,8 +247,11 @@ class Validator {
     if (!array_key_exists($this->key, $this->params))
       return $this;
 
-    $this->isStr()->trim()->maxLength(190);
-    isEmail($this->params[$this->key]) || self::error('「' . $this->name . '」必須是 E-Mail 格式！');
+    if ($this->isNeed || $this->params[$this->key]) {
+      $this->isStr()->trim()->maxLength(190);
+      isEmail($this->params[$this->key]) || self::error('「' . $this->name . '」必須是 E-Mail 格式！');
+    }
+
     return $this;
   }
 

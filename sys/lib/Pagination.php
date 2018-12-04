@@ -13,7 +13,7 @@ class Pagination {
   public static $prevText  = '上一頁';
   public static $nextText  = '下一頁';
 
-  public static $limitD4   = 20;
+  public static $limitD4   = 25;
   public static $offsetKey = 'offset';
   public static $limitKey  = 'limit';
   

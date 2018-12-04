@@ -152,6 +152,17 @@ $footerHeight: 32px;
       color: #266933;
     }
   }
+
+  .show {
+    a {
+      color: #f17969;
+      border-bottom: 1px solid #f17969;
+      &:hover {
+        color: #ec9a98;
+        border-bottom: 1px solid #ec9a98;
+      }
+    }
+  }
 }
 
 table.list {
@@ -173,4 +184,23 @@ table.list {
       border-bottom: 1px solid #ecc598;
     }
   }
+  
 }
+  
+table.list th .checkbox input:not([disabled]):checked ~ span:before, table.list th .checkbox input:not([disabled]):checked ~ span:after, table.list td .checkbox input:not([disabled]):checked ~ span:before, table.list td .checkbox input:not([disabled]):checked ~ span:after {
+  background-color: #337541;
+}
+
+#choice-box .choice-box {
+  header {
+    background-color: #16583a;
+  }
+  .items .item>a {
+    color: #f57070;
+
+    &:hover {
+      color: #efa5a3;
+    }
+  }
+}
+

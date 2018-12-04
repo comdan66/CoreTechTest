@@ -4,7 +4,7 @@ class Admin extends AdminCrudController {
   private $ignoreIds;
   
   public function __construct() {
-    parent::__construct();
+    parent::__construct(\M\AdminRole::ROLE_ADMIN, \M\AdminRole::ROLE_ROOT);
 
     wtfTo('AdminAdminIndex');
 

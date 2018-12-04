@@ -4,9 +4,7 @@ abstract class AdminCrudController extends AdminController {
   protected $obj;
   
   public function __construct() {
-    parent::__construct();
-
-    Load::sysLib('Admin' . DIRECTORY_SEPARATOR . 'Admin.php');
+    parent::__construct(func_get_args());
 
     $this->obj = null;
 

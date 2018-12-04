@@ -3,7 +3,7 @@
 class Crontab extends AdminCrudController {
   
   public function __construct() {
-    parent::__construct();
+    parent::__construct(\M\AdminRole::ROLE_ROOT);
 
     if (in_array(Router::methodName(), ['show', 'read']))
       if (!(($id = Router::params('id')) && ($this->obj = \M\Crontab::one('id = ?', $id))))

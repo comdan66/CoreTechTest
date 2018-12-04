@@ -42,7 +42,7 @@
 
       <div id='menu-user'>
         <figure class='_ic'>
-          <img src="<?php echo Asset::url('asset/img/admin.png');?>">
+          <img src="<?php echo \M\Admin::current()->avatar->url();?>">
         </figure>
 
         <div>
@@ -52,36 +52,19 @@
       </div>
 
       <div id='menu-main'>
-        <div>
-    <?php if (\M\Admin::current()->inRoles(\M\AdminRole::ROLE_ROOT)) {
-            $bcnt = \M\Backup::count('isRead = ?', \M\Backup::IS_READ_NO);
-            $ccnt = \M\Crontab::count('isRead = ?', \M\Crontab::IS_READ_NO); ?>
-            <span data-cntlabel='backup-isRead crontab-isRead' data-cnt='<?php echo $bcnt + $ccnt;?>' class='icon-14'>後台設定</span>
-            <div>
-              <a href="<?php echo $url = Url::toRouter('AdminMainIndex');?>" class='icon-21<?php echo $url === $currentUrl ? ' active' : '';?>'>後台首頁</a>
-              <a href="<?php echo $url = Url::toRouter('AdminAdminIndex');?>" class='icon-15<?php echo $url === $currentUrl ? ' active' : '';?>'>管理員帳號</a>
-              <a href="<?php echo $url = Url::toRouter('AdminBackupIndex');?>" class='icon-46<?php echo $url === $currentUrl ? ' active' : '';?>' data-cntlabel='backup-isRead' data-cnt='<?php echo $bcnt;?>'>每日備份</a>
-              <a href="<?php echo $url = Url::toRouter('AdminCrontabIndex');?>" class='icon-62<?php echo $url === $currentUrl ? ' active' : '';?>' data-cntlabel='crontab-isRead' data-cnt='<?php echo $ccnt;?>'>排程執行</a>
-            </div>
-    <?php } else if (\M\Admin::current()->inRoles(\M\AdminRole::ROLE_ADMIN)) { ?>
-            <span class='icon-14'>後台設定</span>
-            <div>
-              <a href="<?php echo $url = Url::toRouter('AdminMainIndex');?>" class='icon-21<?php echo $url === $currentUrl ? ' active' : '';?>'>後台首頁</a>
-              <a href="<?php echo $url = Url::toRouter('AdminAdminIndex');?>" class='icon-15<?php echo $url === $currentUrl ? ' active' : '';?>'>管理員帳號</a>
-            </div>
-    <?php } else { ?>
-            <span class='icon-14'>後台設定</span>
-            <div>
-              <a href="<?php echo $url = Url::toRouter('AdminMainIndex');?>" class='icon-21<?php echo $url === $currentUrl ? ' active' : '';?>'>後台首頁</a>
-            </div>
-    <?php } ?>
-        </div>
-
+  <?php echo AdminLayout::menu([
+          '後台設定 | icon-14' => [
+            '後台首頁' => 'AdminMainIndex | icon-21',
+            '管理員帳號' => 'AdminAdminIndex | icon-15',
+            '每日備份' => 'AdminBackupIndex | icon-46 | data-cntlabel=backup-isRead | data-cnt=' . \M\Backup::count('isRead = ?', \M\Backup::IS_READ_NO),
+            '排程紀錄' => 'AdminCrontabIndex | icon-62 | data-cntlabel=crontab-isRead | data-cnt=' . \M\Crontab::count('isRead = ?', \M\Crontab::IS_READ_NO),
+          ],
+        ], $currentUrl); ?>
       </div>
     </div>
 
-
     <footer id='footer'><span>後台版型設計 by </span><a href='https://www.ioa.tw/' target='_blank'>OAWU</a></footer>
+    <div id='submit-loading'><div><span>表單送出中，請稍候</span></div></div>
 
   </body>
 </html>
