@@ -2,6 +2,6 @@
 
 class Main extends Controller {
   public function index() {
-    return View::create('site/Main/index.php');
+    return Url::refresh('shops');
   }
 }
