@@ -28,7 +28,7 @@ class ShopPhoto extends Model {
 class ShopPhotoFilenameImageUploader extends ImageUploader {
   public function versions() {
     return [
-      'w100' => ['resize' => [100, 100, 'width']],
+      'w330' => ['resize' => [330, 330, 'width']],
     ];
   }
 }

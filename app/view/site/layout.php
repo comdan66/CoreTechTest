@@ -16,7 +16,7 @@
     <header id='header'>
       <div class='top'>
         <div class='container'>
-          <h1>台北市/信義區/日式料理/居酒屋 美食排行榜</h1>
+          <h1><?php echo isset($h1) && $h1 ?: '';?></h1>
         </div>
       </div>
 
