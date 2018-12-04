@@ -6,8 +6,20 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-12:before {
+  content: "\e012";
+}
+.icon-2:before {
+  content: "\e002";
+}
+.icon-1:before {
+  content: "\e001";
+}
+.icon-11:before {
+  content: "\e011";
+}
 .icon-8:before {
-  content: "\e009";
+  content: "\e008";
 }
 .icon-6:before {
   content: "\e006";
@@ -16,8 +28,11 @@
 .icon-5:before {
   content: "\e005";
 }
+.icon-10:before {
+  content: "\e010";
+}
 .icon-9:before {
-  content: "\e909";
+  content: "\e009";
 }
 .icon-7:before {
   content: "\e007";
@@ -27,10 +42,4 @@
 }
 .icon-4:before {
   content: "\e004";
-}
-.icon-2:before {
-  content: "\e002";
-}
-.icon-1:before {
-  content: "\e001";
 }

@@ -11,8 +11,6 @@
 #main .container > article { display: inline-block; width: 100%; margin-top: 50px; font-size: 18px; text-align: left; }
 #main .container > article > * { display: inline-block; width: 100%; }
 #main .container > article > p { margin: 0; margin-top: 20px; font-size: 14px; line-height: 16px; }
-#main .container h3 { display: inline-block; width: 100%; height: 40px; line-height: 40px; text-align: left; margin: 0; margin-top: 40px; font-size: 23px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #f3a68c; }
-#main .container h3:before { display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; color: #999999; font-size: 36px; margin-right: 4px; }
 
 #banner, #maps, #table { display: inline-block; width: 700px; height: 300px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px; }
 

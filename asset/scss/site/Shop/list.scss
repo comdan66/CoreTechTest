@@ -9,9 +9,12 @@
     > * {
       float: left;
       display: inline-block;
+      width: calc(100% - 265px);
+      + * {
+        width: 265px;
+      }
     }
     .left {
-      width: calc(100% - 265px);
       text-align: left;
 
       h2 {
@@ -24,52 +27,8 @@
         @include background-image(linear-gradient(transparent 65%, rgba(255, 209, 204, 1.00) 70%));
       }
 
-      > .pages {
-        display: inline-block;
-        width: 100%;
+      .pagination {
         margin-top: 70px;
-        text-align: center;
-
-        > div {
-          display: inline-block;
-          margin: 0 auto;
-          @include clearfix();
-          
-          > * {
-            display: inline-block;
-            float: left;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            font-size: 12px;
-            text-decoration: none;
-            border: 1px solid rgba(204, 204, 204, 1.00);
-            background-color: white;
-            color: rgba(85, 85, 85, 1.00);
-            @include transition(background-color .3s, color .3s);
-
-            + * {
-              margin-left: 14px;
-            }
-            
-            &:hover {
-              background-color: rgba(240, 216, 216, 1.00);
-            }
-            &.a {
-              background-color: rgba(240, 128, 128, 1.00);
-              color: rgba(255, 255, 255, 1.00);
-              border-color: rgba(240, 128, 128, 1.00);
-            }
-            &.p:before {
-              font-family: "icomoon";
-              content: "\e002";
-            }
-            &.n:before {
-              font-family: "icomoon";
-              content: "\e001";
-            }
-          }
-        }
       }
 
       .items {
@@ -236,7 +195,6 @@
       }
     }
     .right {
-      width: 265px;
       border: 1px solid rgba(211, 211, 211, 1.00);
       padding: 15px;
       text-align: left;

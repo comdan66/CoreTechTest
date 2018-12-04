@@ -32,12 +32,25 @@ html body > * { display: inline-block; width: 100%; }
 #footer .container > a { display: inline-block; width: auto; width: 100px; margin: 20px 20px 20px 0; }
 #footer .container > a img { width: 100%; -webkit-filter: brightness(100); filter: brightness(100); }
 
-.like, .comment { display: inline-block; height: 36px; line-height: 36px; padding: 0 12px; font-size: 18px; font-weight: bold; border: 1px solid #0173a8; background-color: white; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-transform: uppercase; cursor: pointer; text-decoration: none; }
-.like:before, .comment:before { font-family: "icomoon"; display: inline-block; margin-right: 8px; -moz-transform: scale(1.8, 1.8); -ms-transform: scale(1.8, 1.8); -webkit-transform: scale(1.8, 1.8); transform: scale(1.8, 1.8); margin-top: -5px; font-weight: normal; color: #0173a8; content: '\e006'; }
+.like, .go-comment { display: inline-block; height: 36px; line-height: 36px; padding: 0 12px; font-size: 18px; font-weight: bold; border: 1px solid #0173a8; background-color: white; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.like:before, .go-comment:before { font-family: "icomoon"; display: inline-block; margin-right: 8px; -moz-transform: scale(1.8, 1.8); -ms-transform: scale(1.8, 1.8); -webkit-transform: scale(1.8, 1.8); transform: scale(1.8, 1.8); margin-top: -5px; font-weight: normal; color: #0173a8; content: '\e006'; }
 
-.comment { color: #555555; -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
-.comment:hover { background-color: #ccefff; }
+.go-comment { color: #555555; -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.go-comment:hover { background-color: #ccefff; }
 
 .like { border: 1px solid #ea5549; }
 .like:before { content: '\e003'; color: #ea5549; -moz-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); -webkit-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); margin-top: 0; }
 .like.ed:before { content: '\e004'; }
+
+.pagination { display: inline-block; width: 100%; text-align: center; }
+.pagination > div { display: inline-block; margin: 0 auto; *zoom: 1; }
+.pagination > div:after { display: table; content: ""; line-height: 0; clear: both; }
+.pagination > div > * { display: inline-block; float: left; width: 30px; height: 30px; line-height: 30px; font-size: 12px; text-decoration: none; border: 1px solid #cccccc; background-color: white; color: #555555; -moz-transition: background-color 0.3s, color 0.3s; -o-transition: background-color 0.3s, color 0.3s; -webkit-transition: background-color 0.3s, color 0.3s; transition: background-color 0.3s, color 0.3s; }
+.pagination > div > * + * { margin-left: 14px; }
+.pagination > div > *:hover { background-color: #f0d8d8; }
+.pagination > div > *.a { background-color: lightcoral; color: white; border-color: lightcoral; }
+.pagination > div > *.p:before { font-family: "icomoon"; content: "\e002"; }
+.pagination > div > *.n:before { font-family: "icomoon"; content: "\e001"; }
+
+h3 { display: inline-block; width: 100%; height: 40px; line-height: 40px; text-align: left; margin: 0; margin-top: 40px; font-size: 23px; text-transform: uppercase; font-weight: bold; border-bottom: 2px solid #f3a68c; }
+h3:before { display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; color: #999999; font-size: 36px; margin-right: 4px; }

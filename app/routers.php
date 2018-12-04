@@ -3,9 +3,9 @@
 Router::get('')->controller('Main@index');
 
 Router::get('shops')->controller('Shop@index');
-Router::get('shops/(id:num)')->controller('Shop@show');
-Router::get('shops/top')->controller('Shop@top');
 Router::get('shops/search')->controller('Shop@search');
+Router::get('shops/(id:num)')->controller('Shop@show');
+
 Router::get('shops/(id:num)/comments')->controller('ShopComment@index');
 Router::post('shops/(id:num)/comments')->controller('ShopComment@create');
 

@@ -1,7 +1,7 @@
 <div class='left'>
   <h2>台北市/信義區/日式料理/居酒屋 排行榜</h2>
   
-  <div class='pages'>
+  <div class='pagination'>
     <div>
       <a href="" class='a'>1</a>
       <a href="">2</a>
@@ -116,7 +116,7 @@
     </div>
   </div>
 
-  <div class='pages'>
+  <div class='pagination'>
     <div>
       <a href="" class='a'>1</a>
       <a href="">2</a>
