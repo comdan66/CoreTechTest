@@ -59,6 +59,9 @@
             '每日備份' => 'AdminBackupIndex | icon-46 | data-cntlabel=backup-isRead | data-cnt=' . \M\Backup::count('isRead = ?', \M\Backup::IS_READ_NO),
             '排程紀錄' => 'AdminCrontabIndex | icon-62 | data-cntlabel=crontab-isRead | data-cnt=' . \M\Crontab::count('isRead = ?', \M\Crontab::IS_READ_NO),
           ],
+          '上稿功能 | icon-03' => [
+            '商店上稿' => 'AdminShopMainIndex | icon-53',
+          ],
         ], $currentUrl); ?>
       </div>
     </div>

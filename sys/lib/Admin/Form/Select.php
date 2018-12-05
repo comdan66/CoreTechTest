@@ -27,6 +27,7 @@ class AdminFormSelect extends AdminFormUnitItems {
     $this->focus && $attrs['autofocus'] = $this->focus;
     $this->need && $attrs['required'] = true;
     $this->disable && ($attrs['disabled'] = $this->disable) && $attrs['required'] = false;
+    $attrs['data-val'] = $value;
 
     $return = '';
     $return .= '<select' . attr($attrs) .'>';

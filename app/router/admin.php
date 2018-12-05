@@ -30,4 +30,13 @@ Router::dir('admin', 'Admin', function() {
   Router::get('crontabs/(id:num)')->controller('Crontab@show');
   Router::post('crontabs/(id:num)/read')->controller('Crontab@read');
 
+  // Shop
+  Router::get('shops')->controller('ShopMain@index');
+  Router::get('shops/add')->controller('ShopMain@add');
+  Router::post('shops')->controller('ShopMain@create');
+  Router::get('shops/(id:num)/edit')->controller('ShopMain@edit');
+  Router::put('shops/(id:num)')->controller('ShopMain@update');
+  Router::get('shops/(id:num)')->controller('ShopMain@show');
+  Router::del('shops/(id:num)')->controller('ShopMain@delete');
+  
 });

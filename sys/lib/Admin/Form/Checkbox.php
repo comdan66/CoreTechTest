@@ -21,7 +21,7 @@ class AdminFormCheckbox extends AdminFormUnitItems {
 
     $return = '';
 
-    $return .= '<div class="checkboxs">';
+    $return .= '<div class="checkboxs" data-val=\'' . json_encode(array_map(function($t) { return is_numeric($t) ? intval($t) : $t; }, $value)) . '\'>';
     $return .= implode('', array_map(function($item) use ($value) {
       $return = '';
       $return .= '<label>';

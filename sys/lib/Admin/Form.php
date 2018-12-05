@@ -83,7 +83,7 @@ class AdminForm {
     return $this->str;
   }
 
-  public function appendUnit(AdminFormUnit $unit) {
+  public function appendUnit($unit) {
     array_push($this->units, $unit);
     return $this;
   }

@@ -1,0 +1,13 @@
+@import "_oa";
+
+.checkboxs {
+  &:empty {
+    &:before {
+      display: inline-block;
+      margin-top: 10px;
+
+      content: '沒有資料！';
+      color: rgba(180, 180, 180, 1);
+    }
+  }
+}

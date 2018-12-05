@@ -1,0 +1,2 @@
+@charset "UTF-8";
+.checkboxs:empty:before { display: inline-block; margin-top: 10px; content: '沒有資料！'; color: #b4b4b4; }
