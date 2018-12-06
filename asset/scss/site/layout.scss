@@ -183,6 +183,7 @@ html {
     content: '\e006';
   }
 }
+
 .go-comment {
   color: rgba(85, 85, 85, 1);
   @include transition(background-color .3s);
@@ -205,7 +206,6 @@ html {
     content: '\e004';
   }
 }
-
 
 .pagination {
   display: inline-block;
@@ -253,7 +253,6 @@ html {
     }
   }
 }
-
 
 h3 {
   display: inline-block;

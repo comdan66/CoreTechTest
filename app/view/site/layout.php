@@ -16,22 +16,22 @@
     <header id='header'>
       <div class='top'>
         <div class='container'>
-          <h1><?php echo isset($h1) && $h1 ?: '';?></h1>
+          <h1><?php echo empty($h1) ? '' : $h1;?></h1>
         </div>
       </div>
 
       <div class='logo'>
         <div class='container'>
-          <a href=""><img src="<?php echo Asset::url('/asset/img/site/logo.png');?>"></a>
+          <a href="<?php echo Url::base();?>"><img src="<?php echo Asset::url('/asset/img/site/logo.png');?>"></a>
         </div>
       </div>
     </header>
 
     <nav id='nav'>
       <div class='container'>
-        <span><a href="">首頁</a></span>
-        <span><a href="">台北市 排行榜</a></span>
-        <span>美食排行榜</span>
+        <?php echo implode('', array_map(function($t) {
+          return '<span>' . $t . '</span>';
+        }, $nav));?>
       </div>
     </nav>
 
@@ -43,7 +43,7 @@
 
     <footer id='footer'>
       <div class='container'>
-        <a href=""><img src="<?php echo Asset::url('/asset/img/site/logo.png');?>"></a>
+        <a href="<?php echo Url::base();?>"><img src="<?php echo Asset::url('/asset/img/site/logo.png');?>"></a>
       </div>
     </footer>
 

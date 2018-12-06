@@ -11,7 +11,9 @@ class FoodSub extends Model {
     'shopFood' => 'ShopFood'
   ];
 
-  // static $belongToOne = [];
+  static $belongToOne = [
+    'main' => 'FoodMain'
+  ];
 
   // static $belongToMany = [];
 

@@ -15,7 +15,8 @@ abstract class SiteController extends Controller {
     $this->asset = Asset::create(1)
          ->addCSS('/asset/css/icon-site.css')
          ->addCSS('/asset/css/site/layout.css')
-         ->addJS('/asset/js/res/jquery-1.10.2.min.js');
+         ->addJS('/asset/js/res/jquery-1.10.2.min.js')
+         ->addJS('/asset/js/site/layout.js');
 
     $this->flash = Session::getFlashData('flash');
     !isset($this->flash['params']) || $this->flash['params'] || $this->flash['params'] = null;

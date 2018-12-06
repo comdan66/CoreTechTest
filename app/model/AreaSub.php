@@ -9,7 +9,9 @@ class AreaSub extends Model {
 
   // static $hasMany = [];
 
-  // static $belongToOne = [];
+  static $belongToOne = [
+    'main' => 'AreaMain'
+  ];
 
   // static $belongToMany = [];
 
