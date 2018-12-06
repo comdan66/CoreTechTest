@@ -1,195 +1,107 @@
-<div class='left'>
-  <h2>台北市/信義區/日式料理/居酒屋 排行榜</h2>
-  
-  <div class='pagination'>
-    <div>
-      <a href="" class='a'>1</a>
-      <a href="">2</a>
-      <a href="">3</a>
-      <a href="">4</a>
-      <a href="">5</a>
-      <a href="" class='n'></a>
-    </div>
-  </div>
-
-  <div class='items yellow'>
-    <div class='item'>
-      <a class='title' href=''>
-        <span>TEST1日式小小居酒屋</span>
-      </a>
-      
-      <div class='detail'>
-        <div class='img'>
-          <img src='<?php echo Asset::url('/asset/img/1.png');?>'>
-        </div>
-
-        <div class='infos'>
-          <span class='title'>好吃！好喝！好便宜！來TEST1日式小小居酒屋吧！</span>
-          <div class='table'>
-            <div data-title='分類'>
-              <span>日式料理</span>
-            </div>
-            <div data-title='標籤'>
-              <span><a href=''>居酒屋</a><a href=''>綜合日式料理綜合日式料理</a><a href=''>生魚片、壽司</a></span>
-            </div>
-            <div data-title='營業時間'>
-              <span>17:00 ～ 4:00</span>
-            </div>
-            <div data-title='地址'>
-              <span>台北市信義區〇〇路〇〇巷〇〇號〇〇樓</span>
-            </div>
-          </div>
-
-          <label class='like'>like</label>
-        </div>
-
+<div class='left yellow'>
+  <h2><?php echo $tag;?></h2>
+  <?php
+  if ($page['links']) { ?>
+    <div class='pagination'>
+      <div>
+  <?php echo $page['links'] = implode('', $page['links']);?>
       </div>
     </div>
+  <?php
+  } ?>
 
-    <div class='item'>
-      <a class='title' href=''>
-        <span>TEST1日式小小居酒屋</span>
-      </a>
-      
-      <div class='detail'>
-        <div class='img'>
-          <img src='<?php echo Asset::url('/asset/img/1.png');?>'>
-        </div>
-
-        <div class='infos'>
-          <span class='title'>好吃！好喝！好便宜！來TEST1日式小小居酒屋吧！</span>
-          <div class='table'>
-            <div class='tr' data-title='分類'>
-              <span>日式料理</span>
-            </div>
-            <div class='tr' data-title='標籤'>
-              <span><a href=''>居酒屋</a><a href=''>綜合日式料理綜合日式料理</a><a href=''>生魚片、壽司</a></span>
-            </div>
-            <div class='tr' data-title='營業時間'>
-              <span>17:00 ～ 4:00</span>
-            </div>
-            <div class='tr' data-title='地址'>
-              <span>台北市信義區〇〇路〇〇巷〇〇號〇〇樓</span>
-            </div>
-          </div>
-
-          <label class='like'>like</label>
-        </div>
-
+  <div class='items'>
+<?php
+    foreach ($shopMains as  $shopMain) { ?>
+      <div class='item'>
+        <a class='title' href='<?php echo Url::toRouter('ShopShow', $shopMain);?>'>
+          <span><?php echo $shopMain->name;?></span>
+        </a>
         
-
-      </div>
-    </div>
-    <div class='item'>
-      <a class='title' href=''>
-        <span>TEST1日式小小居酒屋</span>
-      </a>
-      
-      <div class='detail'>
-        <div class='img'>
-          <img src='<?php echo Asset::url('/asset/img/1.png');?>'>
-        </div>
-
-        <div class='infos'>
-          <span class='title'>好吃！好喝！好便宜！來TEST1日式小小居酒屋吧！</span>
-          <div class='table'>
-            <div class='tr' data-title='分類'>
-              <span>日式料理</span>
-            </div>
-            <div class='tr' data-title='標籤'>
-              <span><a href=''>居酒屋</a><a href=''>綜合日式料理綜合日式料理</a><a href=''>生魚片、壽司</a></span>
-            </div>
-            <div class='tr' data-title='營業時間'>
-              <span>17:00 ～ 4:00</span>
-            </div>
-            <div class='tr' data-title='地址'>
-              <span>台北市信義區〇〇路〇〇巷〇〇號〇〇樓</span>
-            </div>
+        <div class='detail'>
+          <div class='img'>
+            <img src='<?php echo $shopMain->photos ? $shopMain->photos[0]->filename->url('w330') : '';?>'>
           </div>
 
-          <label class='like'>like</label>
+          <div class='infos'>
+            <span class='title'><?php echo $shopMain->title;?></span>
+            <div class='table'>
+              <div data-title='分類'>
+                <span><?php echo !$shopMain->foodMain ? $shopMain->foodMain->name : '';?></span>
+              </div>
+              <div data-title='標籤'>
+                <span><?php echo implode('', array_map(function($food) { return '<a>' . $food->name . '</a>'; }, $shopMain->foods));?></span>
+              </div>
+              <div data-title='營業時間'>
+                <span><?php echo $shopMain->openTime;?></span>
+              </div>
+              <div data-title='地址'>
+                <span><?php echo $shopMain->address;?></span>
+              </div>
+            </div>
+
+            <label class='like' data-id='<?php echo $shopMain->id;?>'>like</label>
+          </div>
+
         </div>
+      </div>
+<?php
+    } ?>
+  </div>
 
-        
-
+  <?php
+  if ($page['links']) { ?>
+    <div class='pagination'>
+      <div>
+  <?php echo $page['links'];?>
       </div>
     </div>
-  </div>
-
-  <div class='pagination'>
-    <div>
-      <a href="" class='a'>1</a>
-      <a href="">2</a>
-      <a href="">3</a>
-      <a href="">4</a>
-      <a href="">5</a>
-      <a href="" class='n'></a>
-    </div>
-  </div>
+  <?php
+  } ?>
 
 </div>
 
-<form class='right'>
+<form class='right yellow'>
   <div class='title'>查詢</div>
   
   <div class='condition red'>
     <div class='title'>地點</div>
-    <span class='active'>台北市</span>
-    <div>
-      <label>
-        <input type='checkbox'>
-        <span>全台北市</span>
-      </label>
-      
-      <label>
-        <input type='checkbox'>
-        <span>信義區</span>
-      </label>
-      
-      <label>
-        <input type='checkbox'>
-        <span>信義區</span>
-      </label>
-    </div>
-    
-    <span>新北市</span>
-    <div>
-      <label>
-        <input type='checkbox'>
-        <span>全台北市</span>
-      </label>
-      
-      <label>
-        <input type='checkbox'>
-        <span>信義區</span>
-      </label>
-      
-      <label>
-        <input type='checkbox'>
-        <span>信義區</span>
-      </label>
-    </div>
+<?php
+    foreach ($area as $main) { ?>
+      <span<?php echo attr($main, ['subs', 'text']);?>><?php echo $main['text'];?></span>
+<?php if ($main['subs']) { ?>
+        <div>
+    <?php foreach ($main['subs'] as $sub) { ?>
+            <label>
+              <input<?php echo attr($sub, 'text');?>>
+              <span><?php echo $sub['text'];?></span>
+            </label>
+    <?php }?>
+        </div>
+<?php }
+    } ?>
   </div>
   
-  <div class='condition yellow'>
+  <div class='condition'>
     <div class='title'>分類</div>
-    
-    <span>日式料理</span>
-    <div>
-      <label>
-        <input type='checkbox'>
-        <span>全日式料理</span>
-      </label>
-      
-      <label>
-        <input type='checkbox'>
-        <span>居酒屋</span>
-      </label>
-    </div>
+<?php
+    foreach ($food as $main) { ?>
+      <span<?php echo attr($main, ['subs', 'text']);?>><?php echo $main['text'];?></span>
+<?php if ($main['subs']) { ?>
+        <div>
+    <?php foreach ($main['subs'] as $sub) { ?>
+            <label>
+              <input<?php echo attr($sub, 'text');?>>
+              <span><?php echo $sub['text'];?></span>
+            </label>
+    <?php }?>
+        </div>
+<?php }
+    } ?>
   </div>
 
   <div class='btns'>
     <input type='submit' value='查詢'>
-    <a href="">排行榜</a>
+    <a href="<?php echo Url::toRouter('ShopSearch');?>">搜尋頁</a>
   </div>
 </form>

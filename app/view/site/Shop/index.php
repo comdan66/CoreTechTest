@@ -1,4 +1,4 @@
-<div class='left'>
+<div class='left red'>
   <h2><?php echo $tag;?></h2>
   <?php
   if ($page['links']) { ?>
@@ -10,11 +10,11 @@
   <?php
   } ?>
 
-  <div class='items red'>
+  <div class='items'>
 <?php
     foreach ($shopMains as $i => $shopMain) { ?>
       <div class='item'>
-        <a class='title' href='' data-rank='<?php echo $page['offset'] + $i + 1;?>'>
+        <a class='title' href='<?php echo Url::toRouter('ShopShow', $shopMain);?>' data-rank='<?php echo $page['offset'] + $i + 1;?>'>
           <span><?php echo $shopMain->name;?></span>
         </a>
         
@@ -61,10 +61,10 @@
 
 </div>
 
-<form class='right'>
+<form class='right red'>
   <div class='title'>查詢</div>
   
-  <div class='condition red'>
+  <div class='condition'>
     <div class='title'>地點</div>
 <?php
     foreach ($area as $main) { ?>

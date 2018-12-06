@@ -31,7 +31,7 @@
       <div class='container'>
         <?php echo implode('', array_map(function($t) {
           return '<span>' . $t . '</span>';
-        }, $nav));?>
+        }, empty($nav) ? [] : $nav));?>
       </div>
     </nav>
 

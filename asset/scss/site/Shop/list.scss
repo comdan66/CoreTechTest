@@ -24,7 +24,7 @@
         font-size: 20px;
         margin: 0;
         font-weight: normal;
-        @include background-image(linear-gradient(transparent 65%, rgba(255, 209, 204, 1.00) 70%));
+
       }
 
       .pagination {
@@ -188,15 +188,27 @@
           }
         }
         
-        &.red {
+      }
+
+      &.red {
+        h2 {
+          @include background-image(linear-gradient(transparent 65%, rgba(255, 209, 204, 1.00) 70%));  
+        }
+
+        .items {
           > .item {
             background-color: rgba(255, 232, 230, 1.00);
           }
         }
-        
-        &.yellow {
+      }
+      &.yellow {
+        h2 {
+          @include background-image(linear-gradient(transparent 65%, rgba(255, 218, 185, 1.00) 70%));  
+        }
+
+        .items {
           > .item {
-          background-color: rgba(253, 245, 230, 1.00);
+            background-color: rgba(253, 245, 230, 1.00);
           }
         }
       }
@@ -205,6 +217,37 @@
       border: 1px solid rgba(211, 211, 211, 1.00);
       padding: 15px;
       text-align: left;
+
+      &.red {
+        .condition {
+          .title {
+            border-color: rgba(255, 99, 71, 1.00);
+          }
+          > span {
+            + div {
+              border: 1px solid rgba(255, 99, 71, 1.00);
+            }
+            &.active {
+              background-color: rgba(255, 99, 71, 1.00);
+            }
+          }
+        }
+      }
+      &.yellow {
+        .condition {
+          .title {
+            border-color: rgba(255, 190, 77, 1.00);
+          }
+          > span {
+            + div {
+              border: 1px solid rgba(255, 190, 77, 1.00);
+            }
+            &.active {
+              background-color: rgba(255, 190, 77, 1.00);
+            }
+          }
+        }
+      }
 
       > .title {
         display: inline-block;
@@ -297,33 +340,6 @@
             }
             + div {
               display: inline-block;
-            }
-          }
-        }
-
-        &.red {
-          .title {
-            border-color: rgba(255, 99, 71, 1.00);
-          }
-          > span {
-            + div {
-              border: 1px solid rgba(255, 99, 71, 1.00);
-            }
-            &.active {
-              background-color: rgba(255, 99, 71, 1.00);
-            }
-          }
-        }
-        &.yellow {
-          .title {
-            border-color: rgba(255, 190, 77, 1.00);
-          }
-          > span {
-            + div {
-              border: 1px solid rgba(255, 190, 77, 1.00);
-            }
-            &.active {
-              background-color: rgba(255, 190, 77, 1.00);
             }
           }
         }
