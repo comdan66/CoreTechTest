@@ -15,7 +15,7 @@ class FoodSub extends AdminCrudController {
       if (!$this->obj = \M\FoodSub::one('id = ?', Router::params('id')))
         error('找不到資料！');
 
-    $this->view->with('title', ['標籤上稿', $this->parent->name])
+    $this->view->with('title', ['分類上稿', $this->parent->name])
                ->with('currentUrl', Url::toRouter('AdminFoodMainIndex'))
                ->with('parent', $this->parent);
   }

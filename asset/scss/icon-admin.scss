@@ -6,6 +6,9 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-66:before {
+  content: "\e928";
+}
 .icon-64:before {
   content: "\e92b";
 }

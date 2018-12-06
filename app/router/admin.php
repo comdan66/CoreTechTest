@@ -39,42 +39,52 @@ Router::dir('admin', 'Admin', function() {
   Router::get('shops/(id:num)')->controller('ShopMain@show');
   Router::del('shops/(id:num)')->controller('ShopMain@delete');
 
+  // Shop Comment
+  Router::get('shops/(shopId:num)/comments')->controller('ShopMainComment@index');
+  Router::get('shops/(shopId:num)/comments/(id:num)')->controller('ShopMainComment@show');
+  Router::del('shops/(shopId:num)/comments/(id:num)')->controller('ShopMainComment@delete');
+
+  // Shop Comment Reply
+  Router::get('shops/(shopId:num)/comments/(commentId:num)/replies')->controller('ShopMainCommentReply@index');
+  Router::get('shops/(shopId:num)/comments/(commentId:num)/replies/(id:num)')->controller('ShopMainCommentReply@show');
+  Router::del('shops/(shopId:num)/comments/(commentId:num)/replies/(id:num)')->controller('ShopMainCommentReply@delete');
+
   // AreaMain
-  Router::get('area-mains')->controller('AreaMain@index');
-  Router::get('area-mains/add')->controller('AreaMain@add');
-  Router::post('area-mains')->controller('AreaMain@create');
-  Router::get('area-mains/(id:num)/edit')->controller('AreaMain@edit');
-  Router::put('area-mains/(id:num)')->controller('AreaMain@update');
-  Router::del('area-mains/(id:num)')->controller('AreaMain@delete');
-  Router::post('area-mains/sort')->controller('AreaMain@sort');
+  Router::get('areas')->controller('AreaMain@index');
+  Router::get('areas/add')->controller('AreaMain@add');
+  Router::post('areas')->controller('AreaMain@create');
+  Router::get('areas/(id:num)/edit')->controller('AreaMain@edit');
+  Router::put('areas/(id:num)')->controller('AreaMain@update');
+  Router::del('areas/(id:num)')->controller('AreaMain@delete');
+  Router::post('areas/sort')->controller('AreaMain@sort');
 
   // AreaSub
-  Router::get('area-mains/(mainId:num)/area-subs')->controller('AreaSub@index');
-  Router::get('area-mains/(mainId:num)/area-subs/add')->controller('AreaSub@add');
-  Router::post('area-mains/(mainId:num)/area-subs')->controller('AreaSub@create');
-  Router::get('area-mains/(mainId:num)/area-subs/(id:num)/edit')->controller('AreaSub@edit');
-  Router::put('area-mains/(mainId:num)/area-subs/(id:num)')->controller('AreaSub@update');
-  Router::del('area-mains/(mainId:num)/area-subs/(id:num)')->controller('AreaSub@delete');
-  Router::post('area-mains/(mainId:num)/area-subs/sort')->controller('AreaSub@sort');
+  Router::get('areas/(mainId:num)/area-subs')->controller('AreaSub@index');
+  Router::get('areas/(mainId:num)/area-subs/add')->controller('AreaSub@add');
+  Router::post('areas/(mainId:num)/area-subs')->controller('AreaSub@create');
+  Router::get('areas/(mainId:num)/area-subs/(id:num)/edit')->controller('AreaSub@edit');
+  Router::put('areas/(mainId:num)/area-subs/(id:num)')->controller('AreaSub@update');
+  Router::del('areas/(mainId:num)/area-subs/(id:num)')->controller('AreaSub@delete');
+  Router::post('areas/(mainId:num)/area-subs/sort')->controller('AreaSub@sort');
 
   
   // FoodMain
-  Router::get('food-mains')->controller('FoodMain@index');
-  Router::get('food-mains/add')->controller('FoodMain@add');
-  Router::post('food-mains')->controller('FoodMain@create');
-  Router::get('food-mains/(id:num)/edit')->controller('FoodMain@edit');
-  Router::put('food-mains/(id:num)')->controller('FoodMain@update');
-  Router::del('food-mains/(id:num)')->controller('FoodMain@delete');
-  Router::post('food-mains/sort')->controller('FoodMain@sort');
+  Router::get('foods')->controller('FoodMain@index');
+  Router::get('foods/add')->controller('FoodMain@add');
+  Router::post('foods')->controller('FoodMain@create');
+  Router::get('foods/(id:num)/edit')->controller('FoodMain@edit');
+  Router::put('foods/(id:num)')->controller('FoodMain@update');
+  Router::del('foods/(id:num)')->controller('FoodMain@delete');
+  Router::post('foods/sort')->controller('FoodMain@sort');
 
   // FoodSub
-  Router::get('food-mains/(mainId:num)/food-subs')->controller('FoodSub@index');
-  Router::get('food-mains/(mainId:num)/food-subs/add')->controller('FoodSub@add');
-  Router::post('food-mains/(mainId:num)/food-subs')->controller('FoodSub@create');
-  Router::get('food-mains/(mainId:num)/food-subs/(id:num)/edit')->controller('FoodSub@edit');
-  Router::put('food-mains/(mainId:num)/food-subs/(id:num)')->controller('FoodSub@update');
-  Router::del('food-mains/(mainId:num)/food-subs/(id:num)')->controller('FoodSub@delete');
-  Router::post('food-mains/(mainId:num)/food-subs/sort')->controller('FoodSub@sort');
+  Router::get('foods/(mainId:num)/food-subs')->controller('FoodSub@index');
+  Router::get('foods/(mainId:num)/food-subs/add')->controller('FoodSub@add');
+  Router::post('foods/(mainId:num)/food-subs')->controller('FoodSub@create');
+  Router::get('foods/(mainId:num)/food-subs/(id:num)/edit')->controller('FoodSub@edit');
+  Router::put('foods/(mainId:num)/food-subs/(id:num)')->controller('FoodSub@update');
+  Router::del('foods/(mainId:num)/food-subs/(id:num)')->controller('FoodSub@delete');
+  Router::post('foods/(mainId:num)/food-subs/sort')->controller('FoodSub@sort');
 
   
 });

@@ -81,6 +81,9 @@ echo $show->panel(function($obj, &$title) {
 echo $show->panel(function($obj, &$title) {
   $title = '其他資訊';
 
-  // ShowText::create('新增時間')
-  //   ->content($obj->createAt);
+  ShowText::create('上次更新時間')
+    ->content($obj->updateAt);
+
+  ShowText::create('新增時間')
+    ->content($obj->createAt);
 });

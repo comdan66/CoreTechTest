@@ -26,7 +26,6 @@ echo $list->search(function() {
 
   SearchInput::create('地址')
     ->sql('address LIKE ?');
-
 });
 
 echo $list->table(function($obj) {
@@ -36,7 +35,7 @@ echo $list->table(function($obj) {
     ->width(60)
     ->order('id');
 
-  ListImages::create('頭像')
+  ListImages::create('照片')
     ->content(array_column($obj->photos, 'filename'));
 
   ListText::create('名稱')
@@ -47,7 +46,7 @@ echo $list->table(function($obj) {
     ->content($obj->title);
 
   ListText::create('分數')
-    ->content(number_format($obj->score, 2))
+    ->content(Url::toRouterHyperlink('AdminShopMainCommentIndex', $obj)->text(number_format($obj->score, 2)))
     ->width(100)
     ->order('score');
 

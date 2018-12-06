@@ -10,6 +10,7 @@ class ShopMain extends Model {
   static $hasMany = [
     'photos' => ['model' => 'ShopPhoto', 'order' => 'sort ASC'],
     'shopFoods' => 'ShopFood',
+    'comments' => 'ShopMainComment',
     'foods' => ['model' => 'FoodSub', 'by' => 'shopFood'],
   ];
 
@@ -30,6 +31,10 @@ class ShopMain extends Model {
 
     foreach ($this->shopFoods as $shopFood)
       if (!$shopFood->delete())
+        return false;
+
+    foreach ($this->comments as $comment)
+      if (!$comment->delete())
         return false;
 
     return parent::delete();

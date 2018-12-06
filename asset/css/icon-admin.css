@@ -1,6 +1,8 @@
 @charset "UTF-8";
-@font-face { font-family: "icomoon"; src: url('/asset/font/admin/fonts/icomoon.eot?1544086132') format('embedded-opentype'), url('/asset/font/admin/fonts/icomoon.woff?1544086132') format('woff'), url('/asset/font/admin/fonts/icomoon.ttf?1544086132') format('truetype'), url('/asset/font/admin/fonts/icomoon.svg?1544086132') format('svg'); }
+@font-face { font-family: "icomoon"; src: url('/asset/font/admin/fonts/icomoon.eot?1544086240') format('embedded-opentype'), url('/asset/font/admin/fonts/icomoon.woff?1544086240') format('woff'), url('/asset/font/admin/fonts/icomoon.ttf?1544086240') format('truetype'), url('/asset/font/admin/fonts/icomoon.svg?1544086240') format('svg'); }
 [class^="icon-"], [class*=" icon-"] { font-family: "icomoon", Arial, "微軟正黑體", "Microsoft JhengHei", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; -moz-osx-font-smoothing: antialiased; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+
+.icon-66:before { content: "\e928"; }
 
 .icon-64:before { content: "\e92b"; }
 

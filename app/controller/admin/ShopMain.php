@@ -16,7 +16,7 @@ class ShopMain extends AdminCrudController {
   }
 
   public function index() {
-    $list = AdminList::create('\M\ShopMain', ['include' => ['photos']])
+    $list = AdminList::create('\M\ShopMain', ['include' => ['photos', 'comments']])
                      ->setAddUrl(Url::toRouter('AdminShopMainAdd'));
 
     return $this->view->with('list', $list);

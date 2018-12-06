@@ -15,7 +15,7 @@ class AreaSub extends AdminCrudController {
       if (!$this->obj = \M\AreaSub::one('id = ?', Router::params('id')))
         error('找不到資料！');
 
-    $this->view->with('title', ['市區上稿', $this->parent->name])
+    $this->view->with('title', ['縣市上稿', $this->parent->name])
                ->with('currentUrl', Url::toRouter('AdminAreaMainIndex'))
                ->with('parent', $this->parent);
   }
