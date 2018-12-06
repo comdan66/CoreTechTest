@@ -60,6 +60,8 @@
             '排程紀錄' => 'AdminCrontabIndex | icon-62 | data-cntlabel=crontab-isRead | data-cnt=' . \M\Crontab::count('isRead = ?', \M\Crontab::IS_READ_NO),
           ],
           '上稿功能 | icon-03' => [
+            '縣市上稿' => 'AdminAreaMainIndex | icon-53',
+            '分類上稿' => 'AdminFoodMainIndex | icon-53',
             '商店上稿' => 'AdminShopMainIndex | icon-53',
           ],
         ], $currentUrl); ?>

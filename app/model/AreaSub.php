@@ -14,4 +14,12 @@ class AreaSub extends Model {
   // static $belongToMany = [];
 
   // static $uploaders = [];
+
+  public function delete() {
+    foreach (ShopMain::all(['select' => 'id, areaSubId, updateAt', 'where' => ['areaSubId = ?', $this->id]]) as $shop)
+      if (!($shop->areaSubId = 0) && !$shop->save())
+        return false;
+
+    return parent::delete();
+  }
 }

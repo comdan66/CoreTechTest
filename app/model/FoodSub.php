@@ -16,4 +16,12 @@ class FoodSub extends Model {
   // static $belongToMany = [];
 
   // static $uploaders = [];
+  
+  public function delete() {
+    foreach (ShopFood::all(['select' => 'id, updateAt', 'where' => ['foodSubId = ?', $this->id]]) as $shopFood)
+      if (!$shopFood->delete())
+        return false;
+
+    return parent::delete();
+  }
 }
