@@ -5,6 +5,7 @@ return [
     `id`         int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
     `shopMainId` int(11) unsigned NOT NULL COMMENT 'ShopMain ID',
     `foodSubId`  int(11) unsigned NOT NULL COMMENT 'FoodSub ID',
+    `sort`       int(11) unsigned NOT NULL DEFAULT 0 COMMENT '排序 ASC',
     `updateAt`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
     `createAt`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增時間',
     PRIMARY KEY (`id`)
