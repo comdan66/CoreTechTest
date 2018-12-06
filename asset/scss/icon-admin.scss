@@ -6,9 +6,6 @@
   @include font-smoothing(antialiased);
 }
 
-.icon-62:before {
-  content: "\e927";
-}
 .icon-17:before {
   content: "\e03b";
 }
@@ -191,4 +188,7 @@
 }
 .icon-38:before {
   content: "\f188";
+}
+.icon-62:before {
+  content: "\e927";
 }
