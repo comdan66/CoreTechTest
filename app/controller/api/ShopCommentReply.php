@@ -27,7 +27,6 @@ class ShopCommentReply extends ApiController {
         'createAt' => $reply->createAt->format('Y/m/d H:i'),
       ];
     }, \M\ShopMainCommentReply::all([
-      'limit' => 3,
       'order' => 'id DESC',
       'where' => ['shopMainId = ? AND shopMainCommentId = ? AND id < ?', $this->shop->id, $this->comment->id, $params['min']]
     ]));

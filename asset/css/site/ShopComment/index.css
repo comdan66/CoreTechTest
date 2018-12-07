@@ -15,7 +15,7 @@
 #main .container .left + * { margin-top: 80px; width: calc(100% - 600px); }
 #main .container .left .comments { display: inline-block; width: 100%; margin-top: 30px; margin-bottom: 70px; }
 #main .container .left .comments:first-child { margin-top: 0; }
-#main .container .left .comments:empty { margin-top: 0; border: 1px solid rgba(255, 0, 0, 0.3); }
+#main .container .left .comments:empty { margin-top: 0; }
 #main .container .left .comments:empty:before { content: '目前沒有任何資料！'; color: rgba(39, 40, 34, 0.4); }
 #main .container .left .comments .comment { background-color: lemonchiffon; text-align: left; padding: 10px; margin-top: 0 !important; }
 #main .container .left .comments .comment + .comment { margin-top: 30px !important; }

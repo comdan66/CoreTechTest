@@ -5,7 +5,6 @@
   
   .container {
     @include clearfix();
- 
     > * {
       float: left;
       display: inline-block;
@@ -75,7 +74,6 @@
 
         &:empty {
           margin-top: 0;
-          border: 1px solid rgba(255, 0, 0, .3);
           &:before {
             content: '目前沒有任何資料！';
             color: rgba(39, 40, 34, .400)

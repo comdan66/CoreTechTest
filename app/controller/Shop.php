@@ -134,7 +134,7 @@ class Shop extends SiteController {
     return $this->view->with('shopMain', $this->obj)
                       ->with('h1', $this->obj->name . '-' . $this->obj->areaMain->name . ' ' . $this->obj->areaSub->name . '-')
                       ->with('nav', [
-                        Url::toRouterHyperlink('ShopSearch')->text('首頁'),
+                        Url::toRouterHyperlink('ShopIndex')->text('首頁'),
                         Hyperlink::create(Url::toRouter('ShopSearch') . '?' . implode('&', array_map(function($sub) { return 'area[]=' . $sub->id; }, $this->obj->areaMain->subs)))->text($this->obj->areaMain->name),
                         Hyperlink::create(Url::toRouter('ShopSearch') . '?' . 'area[]=' . $this->obj->areaSub->id)->text($this->obj->areaMain->name . '・' . $this->obj->areaSub->name),
                         $this->obj->name . '-' . $this->obj->areaMain->name . '-'

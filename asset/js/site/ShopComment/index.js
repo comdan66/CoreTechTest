@@ -30,7 +30,8 @@ $(function () {
           async: true, cache: false, dataType: 'json', type: 'get'
         })
         .done (function (result) {
-          $replies.append(renderReplys(result.slice(0, 2))).data('min', result.slice(0, 2).map(function(t) { return t.id; }).min());
+          $replies.append(renderReplys(result));
+
           if (result.length < 3)
             $(this).parent().remove();
         }.bind($(this)))

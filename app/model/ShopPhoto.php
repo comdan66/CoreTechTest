@@ -26,6 +26,12 @@ class ShopPhoto extends Model {
 }
 
 class ShopPhotoFilenameImageUploader extends ImageUploader {
+  
+  public function d4Url() {
+    \Load::sysLib('Asset.php');
+    return \Asset::url('/asset/img/site/photo/' . $this->orm->photoNum . '.png');
+  }
+
   public function versions() {
     return [
       'w330' => ['resize' => [330, 330, 'width']],

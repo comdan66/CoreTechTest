@@ -46,7 +46,7 @@ class ShopComment extends SiteController {
 
     return $this->view->with('h1', $this->shop->name . '-' . $this->shop->areaMain->name . ' ' . $this->shop->areaSub->name . '-')
                       ->with('nav', [
-                        Url::toRouterHyperlink('ShopSearch')->text('首頁'),
+                        Url::toRouterHyperlink('ShopIndex')->text('首頁'),
                         Hyperlink::create(Url::toRouter('ShopSearch') . '?' . implode('&', array_map(function($sub) { return 'area[]=' . $sub->id; }, $this->shop->areaMain->subs)))->text($this->shop->areaMain->name),
                         Hyperlink::create(Url::toRouter('ShopSearch') . '?' . 'area[]=' . $this->shop->areaSub->id)->text($this->shop->areaMain->name . '・' . $this->shop->areaSub->name),
                         $this->shop->name . '-' . $this->shop->areaMain->name . '-'

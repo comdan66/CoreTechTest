@@ -17,9 +17,7 @@
   <?php
   } ?>
 
-  <div class='comments'>
-
-    <?php
+  <div class='comments'><?php
     foreach ($comments as $comment) {
       $replies = array_map(function($reply) {
         return [
@@ -49,8 +47,7 @@
       </div>
     <?php
     }
-    ?>
-  </div>
+    ?></div>
 
   <?php
   if ($page['links']) { ?>
