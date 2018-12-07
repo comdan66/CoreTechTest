@@ -1,6 +1,8 @@
 <?php defined('MAPLE') || exit('此檔案不允許讀取！');
 
 class Shop extends SiteController {
+  private $obj;
+
   public function __construct() {
     parent::__construct();
 
@@ -18,6 +20,11 @@ class Shop extends SiteController {
     Pagination::$prevClass   = 'p';
     Pagination::$activeClass = 'a';
     Pagination::$nextClass   = 'n';
+
+
+    if (in_array(Router::methodName(), ['show']))
+      ($this->obj = \M\ShopMain::one('id = ?', Router::params('id'))) || error('找不到資料！');
+
   }
 
   public function index() {
@@ -125,7 +132,15 @@ class Shop extends SiteController {
   public function show() {
     $this->asset
          ->addCSS('/asset/css/site/Shop/show.css');
-    return $this->view;
+
+    return $this->view->with('shopMain', $this->obj)
+                      ->with('h1', $this->obj->name . '-' . $this->obj->areaMain->name . ' ' . $this->obj->areaSub->name . '-')
+                      ->with('nav', [
+        Url::toRouterHyperlink('ShopSearch')->text('首頁'),
+        Hyperlink::create(Url::toRouter('ShopSearch') . '?' . implode('&', array_map(function($sub) { return 'area[]=' . $sub->id; }, $this->obj->areaMain->subs)))->text($this->obj->areaMain->name),
+        Hyperlink::create(Url::toRouter('ShopSearch') . '?' . 'area[]=' . $this->obj->areaSub->id)->text($this->obj->areaMain->name . '・' . $this->obj->areaSub->name),
+        $this->obj->name . '-' . $this->obj->areaMain->name . '-'
+                      ]);
   }
   
   private function validator(&$params) {

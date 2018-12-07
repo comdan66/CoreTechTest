@@ -66,6 +66,118 @@
 
 #maps {
   background-color: rgba(221, 221, 221, 1.00);
+  
+  position: relative;
+  width: 700px;
+  height: 300px;
+  overflow: hidden;
+  background-color: rgba(229, 227, 223, 1.00);
+
+  &.show {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      z-index: 2;
+    }
+    &:before {
+      top: -1px;
+      width: 100%;
+      height: 1px;
+      @include box-shadow(0 0 5px rgba(39, 40, 34, .5));
+    }
+    &:after {
+      top: 0;
+      left: -1px;
+      width: 1px;
+      height: 100%;
+      @include box-shadow(0 0 5px 1px rgba(39, 40, 34, .5));
+    }
+  }
+
+  &:not(.show) {
+    &:before {
+      content: '地圖初始中，請稍候..';
+      position: absolute;
+      left: calc(50% - 200px / 2);
+      top: calc(50% - 32px / 2);
+      display: inline-block;
+      width: 200px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-weight: bold;
+      color: rgba(150, 150, 150, 1);
+      z-index: 3;
+      @include text-shadow(1px 1px 1px white);
+    }
+    > * {
+      display: none;
+    }
+  }
+
+  > .map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(200, 200, 200, 1.00);
+    z-index: 1;
+
+    .gmnoprint.gm-bundled-control, .gm-style-cc, a[href^="http://maps.google.com/maps"], a[href^="https://maps.google.com/maps"] {
+      display: none !important;
+    }
+  }
+
+  > .zoom {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px * 2 + 1px;
+    
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
+    @include border-radius(3px);
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 36px + 1px;
+      left: 5px;
+      display: inline-block;
+      width: calc(100% - 5px * 2);
+      height: 1px;
+      background-color: #dcdcdc;
+    }
+
+    label {
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+
+      color: #6f6f6f;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      background-color: white;
+      @include transition(color .3s);
+      
+      &:hover {
+        color: #323232;
+      }
+    }
+  }
 }
 
 .banner {

@@ -29,6 +29,7 @@ class ShopPhotoFilenameImageUploader extends ImageUploader {
   public function versions() {
     return [
       'w330' => ['resize' => [330, 330, 'width']],
+      'w700' => ['resize' => [700, 700, 'width']],
     ];
   }
 }

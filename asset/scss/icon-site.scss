@@ -6,6 +6,12 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-13:before {
+  content: "\e013";
+}
+.icon-14:before {
+  content: "\e014";
+}
 .icon-12:before {
   content: "\e012";
 }
