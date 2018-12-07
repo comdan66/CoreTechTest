@@ -14,6 +14,7 @@
 #main .container .left { margin-top: 80px; width: 600px; padding-right: 10px; }
 #main .container .left + * { margin-top: 80px; width: calc(100% - 600px); }
 #main .container .left .comments { display: inline-block; width: 100%; margin-top: 30px; margin-bottom: 70px; }
+#main .container .left .comments:first-child { margin-top: 0; }
 #main .container .left .comments:empty { margin-top: 0; border: 1px solid rgba(255, 0, 0, 0.3); }
 #main .container .left .comments:empty:before { content: '目前沒有任何資料！'; color: rgba(39, 40, 34, 0.4); }
 #main .container .left .comments .comment { background-color: lemonchiffon; text-align: left; padding: 10px; margin-top: 0 !important; }
@@ -42,7 +43,7 @@
 #main .container .left .comments .comment .replies .reply .msg:before { content: attr(data-name); font-weight: bold; display: inline-block; width: 100%; height: 22px; line-height: 22px; margin-bottom: 10px; }
 #main .container .left .comments .comment .replies .reply time { width: 110px; text-align: right; }
 #main .container .left .comments .comment .more { text-align: right; }
-#main .container .left .comments .comment .more a { color: coral; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+#main .container .left .comments .comment .more a { color: coral; cursor: pointer; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 #main .container .left .comments .comment .more a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
 #main .container .left .comments .comment form:before { content: '回應投稿'; display: inline-block; width: 100%; height: 22px; line-height: 22px; background-color: #4069e1; color: white; padding: 0 5px; }
 #main .container .left .comments .comment form .row { position: relative; display: inline-block; width: 100%; padding: 2px; padding-left: 101px; }
@@ -53,11 +54,17 @@
 #main .container .left .comments .comment form .row:not([data-title]) > *:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
 #main .container .left .comments .comment form .row:not([data-title]) > * + * { margin-right: 4px; }
 #main .container .left .comments .comment form .row input[type="text"], #main .container .left .comments .comment form .row textarea { width: 100%; }
+#main .container .left .comments .comment form > span { display: inline-block; width: 100%; height: 28px; line-height: 26px; padding: 0 8px; background-color: #f2dede; color: #a94442; border: 1px solid #eed5d5; margin-top: 3px; margin-bottom: 1px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+#main .container .left .comments .comment form > span:empty { display: none; }
+#main .container .left .comments .comment form > span.failure:before { display: inline-block; content: '\e012'; font-family: "icomoon"; margin-right: 4px; }
+#main .container .left .comments .comment form > span.success { color: #34708d; background-color: #daedf7; border-color: #bee8f0; }
 #main .container .right { text-align: left; border-left: 1px solid #cccccc; padding-left: 10px; padding-bottom: 30px; }
 #main .container .right > * { display: inline-block; max-width: 100%; }
 #main .container .right > b { height: 30px; line-height: 30px; font-size: 18px; padding: 0 16px; font-weight: normal; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI2NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNiMGUwZTYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(65%, rgba(0, 0, 0, 0)), color-stop(70%, #b0e0e6)); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 65%, #b0e0e6 70%); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 65%, #b0e0e6 70%); background-image: linear-gradient(rgba(0, 0, 0, 0) 65%, #b0e0e6 70%); margin-bottom: 10px; }
-#main .container .right > span { display: none; width: 100%; height: 28px; line-height: 26px; padding: 0 8px; background-color: #f2dede; color: #a94442; border: 1px solid #eed5d5; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
-#main .container .right > span:before { display: inline-block; content: '\e012'; font-family: "icomoon"; margin-right: 4px; }
+#main .container .right > span { width: 100%; height: 28px; line-height: 26px; padding: 0 8px; background-color: #f2dede; color: #a94442; border: 1px solid #eed5d5; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+#main .container .right > span:empty { display: none; }
+#main .container .right > span.failure:before { display: inline-block; content: '\e012'; font-family: "icomoon"; margin-right: 4px; }
+#main .container .right > span.success { color: #34708d; background-color: #daedf7; border-color: #bee8f0; }
 #main .container .right > div { margin-top: 14px; width: 100%; }
 #main .container .right > div[data-title]:before { content: attr(data-title); display: inline-block; width: 100%; height: 32px; line-height: 32px; text-align: center; background-color: #e6f3ff; text-transform: uppercase; }
 #main .container .right > div input[type='text'], #main .container .right > div input[type='number'], #main .container .right > div textarea { width: calc(100% - 5px * 2); margin-left: 5px; margin-top: 10px; }

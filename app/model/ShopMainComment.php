@@ -11,7 +11,9 @@ class ShopMainComment extends Model {
     'replies' => 'ShopMainCommentReply',
   ];
 
-  // static $belongToOne = [];
+  static $belongToOne = [
+    'shop' => 'ShopMain'
+  ];
 
   // static $belongToMany = [];
 

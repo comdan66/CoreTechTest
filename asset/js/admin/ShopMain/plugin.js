@@ -1,5 +1,3 @@
-
-
 $(function () {
   $('.area-main-id').each(function() {
     var $that = $(this);

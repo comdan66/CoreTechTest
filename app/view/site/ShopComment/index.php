@@ -1,119 +1,75 @@
 <div class='top'>
   <h2>TEST1日式小小居酒屋</h2>
-  <a href="">回店家首頁</a>
+  <a href="<?php echo Url::toRouter('ShopShow', $shop);?>">回店家首頁</a>
 </div>
 
 <h3 class='icon-10'>Comment</h3>
 
 <div class='left'>
   
-  <div class='pagination'>
-    <div>
-      <a href="" class='a'>1</a>
-      <a href="">2</a>
-      <a href="">3</a>
-      <a href="">4</a>
-      <a href="">5</a>
-      <a href="" class='n'></a>
+  <?php
+  if ($page['links']) { ?>
+    <div class='pagination'>
+      <div>
+  <?php echo $page['links'] = implode('', $page['links']);?>
+      </div>
     </div>
-  </div>
+  <?php
+  } ?>
 
   <div class='comments'>
-    
-    <div class='comment'>
-      <b class='title'>還可以啦~</b>
-      
-      <div class='info'>
-        <b>王小明</b>
-        <time>2018/03/11 12:33</time>
+
+    <?php
+    foreach ($comments as $comment) {
+      $replies = array_map(function($reply) {
+        return [
+          'id' => $reply->id,
+          'name' => $reply->name,
+          'content' => $reply->content,
+          'createAt' => $reply->createAt->format('Y/m/d H:i'),
+        ];
+      }, \M\ShopMainCommentReply::all(['order' => 'id DESC', 'limit' => 3, 'where' => ['shopMainId = ? AND shopMainCommentId = ?', $shop->id, $comment->id]])); ?>
+      <div class='comment'>
+        <b class='title'><?php echo $comment->title;?></b>
+        <div class='info'><b><?php echo $comment->name;?></b><time><?php echo $comment->createAt->format('Y/m/d H:i');?></time></div>
+        <div class='score'><?php echo number_format($comment->score);?></div>
+        <div class='content'><?php echo $comment->content;?></div>
+
+        <div class='replies' data-d4='<?php echo json_encode($replies);?>' data-url='<?php echo Url::toRouter('ApiShopCommentReplyIndex', $shop, $comment);?>'></div>
+
+        <form class='reply' method='post' action='<?php echo Url::toRouter('ApiShopCommentReplyCreate', $shop, $comment);?>'>
+          <span></span>
+          <div class='row' data-title='name'><input type='text' placeholder="請寫您的名字" required name='name'></div>
+          <div class='row' data-title='message'><textarea placeholder="請寫回應" required name='content'></textarea></div>
+          <div class='row'>
+            <input type='submit' value='送出'>
+            <input type='reset' value='重填'>
+          </div>
+        </form>
       </div>
-
-      <div class='score'>85</div>
-      
-      <div class='content'>下班後一定很多人想要吃點小品搭配著酒，然後可以好好的聊著天舒壓一下<br/>【TEST1日式小小居酒屋】位在台北世貿站附近，充滿日式風和好吃的餐點，很適合和朋友、同事來喝一杯</div>
-
-      <div class='replies'>
-        <div class='reply'>
-          <div class='icon-11 img'></div>
-          <div class='msg' data-name='王大明'>我也想去</div>
-          <time>2018/03/12 12:33</time>
-        </div>
-        <div class='reply'>
-          <div class='icon-11 img'></div>
-          <div class='msg' data-name='王大明'>我也想去</div>
-          <time>2018/03/12 12:33</time>
-        </div>
-      </div>
-
-      <div class='more'><a href="">顯示全部</a></div>
-
-      <form>
-        <div class='row' data-title='name'><input type='text' placeholder="請寫您的名字"></div>
-        <div class='row' data-title='message'><textarea placeholder="請寫回應"></textarea></div>
-        <div class='row'>
-          <input type='submit' value='送出'>
-          <input type='reset' value='重填'>
-        </div>
-      </form>
-    </div>
-
-    <div class='comment'>
-      <b class='title'>還可以啦~</b>
-      
-      <div class='info'>
-        <b>王小明</b>
-        <time>2018/03/11 12:33</time>
-      </div>
-
-      <div class='score'>85</div>
-      
-      <div class='content'>下班後一定很多人想要吃點小品搭配著酒，然後可以好好的聊著天舒壓一下<br/>【TEST1日式小小居酒屋】位在台北世貿站附近，充滿日式風和好吃的餐點，很適合和朋友、同事來喝一杯</div>
-
-      <div class='replies'>
-        <div class='reply'>
-          <div class='icon-11 img'></div>
-          <div class='msg' data-name='王大明'>我也想去</div>
-          <time>2018/03/12 12:33</time>
-        </div>
-        <div class='reply'>
-          <div class='icon-11 img'></div>
-          <div class='msg' data-name='王大明'>我也想去</div>
-          <time>2018/03/12 12:33</time>
-        </div>
-      </div>
-
-      <div class='more'><a href="">顯示全部</a></div>
-
-      <form>
-        <div class='row' data-title='name'><input type='text' placeholder="請寫您的名字"></div>
-        <div class='row' data-title='message'><textarea placeholder="請寫回應"></textarea></div>
-        <div class='row'>
-          <input type='submit' value='送出'>
-          <input type='reset' value='重填'>
-        </div>
-      </form>
-    </div>
+    <?php
+    }
+    ?>
   </div>
 
-  <div class='pagination'>
-    <div>
-      <a href="" class='a'>1</a>
-      <a href="">2</a>
-      <a href="">3</a>
-      <a href="">4</a>
-      <a href="">5</a>
-      <a href="" class='n'></a>
+  <?php
+  if ($page['links']) { ?>
+    <div class='pagination'>
+      <div>
+  <?php echo $page['links'];?>
+      </div>
     </div>
-  </div>
+  <?php
+  } ?>
 
 </div>
-<form class='right'>
+<form class='right' method='post' action='<?php echo Url::toRouter('ShopCommentCreate', $shop);?>'>
   <b>投稿</b>
-  <span>錯誤！</span>
-  <div data-title='name'><input type='text' placeholder="請寫您的名字"></div>
-  <div data-title='score' class='score'><input type='number' placeholder="請寫評分"></div>
-  <div data-title='title'><input type='text' placeholder="請寫標題"></div>
-  <div data-title='comment'><textarea placeholder="請寫分享文"></textarea></div>
+  <span class='<?php echo $flash['type'];?>'><?php echo $flash['msg'];?></span>
+  <div data-title='name'><input type='text' name='name' placeholder="請寫您的名字" required value='<?php echo $flash['params']['name'] ?: '';?>'></div>
+  <div data-title='score' class='score'><input type='number' name='score' placeholder="請寫評分" required value='<?php echo $flash['params']['score'] ?: '';?>'></div>
+  <div data-title='title'><input type='text' name='title' placeholder="請寫標題" required value='<?php echo $flash['params']['title'] ?: '';?>'></div>
+  <div data-title='comment'><textarea name='content' placeholder="請寫分享文" required><?php echo $flash['params']['content'] ?: '';?></textarea></div>
   <div class='btns'>
     <input type='submit' value='投稿'>
   </div>
