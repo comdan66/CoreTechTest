@@ -56,6 +56,7 @@ class ShopComment extends SiteController {
                       ->with('flash', $flash)
                       ->with('comments', $comments);
   }
+
   public function create() {
     wtfTo('ShopCommentIndex', $this->shop);
 
