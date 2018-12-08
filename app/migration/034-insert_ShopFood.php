@@ -1,7 +1,7 @@
 <?php defined('MAPLE') || exit('此檔案不允許讀取！');
 
 return [
-  'up' => "INSERT INTO `shopfood` (`id`, `shopMainId`, `foodSubId`, `sort`, `updateAt`, `createAt`)
+  'up' => "INSERT INTO `ShopFood` (`id`, `shopMainId`, `foodSubId`, `sort`, `updateAt`, `createAt`)
     VALUES
       (3719, 3719, 14, 1, '2018-12-06 21:14:24', '2018-12-06 21:14:24'),
       (3720, 3720, 11, 1, '2018-12-06 21:14:24', '2018-12-06 21:14:24'),

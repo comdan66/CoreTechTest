@@ -1,7 +1,7 @@
 <?php defined('MAPLE') || exit('此檔案不允許讀取！');
 
 return [
-  'up' => "INSERT INTO `shopphoto` (`id`, `shopMainId`, `photoNum`, `filename`, `sort`, `updateAt`, `createAt`)
+  'up' => "INSERT INTO `ShopPhoto` (`id`, `shopMainId`, `photoNum`, `filename`, `sort`, `updateAt`, `createAt`)
     VALUES
       (7008, 7008, 18, '', 1, '2018-12-04 22:55:33', '2018-12-04 22:55:33'),
       (7009, 7009, 20, '', 1, '2018-12-04 22:55:33', '2018-12-04 22:55:33'),
